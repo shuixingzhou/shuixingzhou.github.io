@@ -2,120 +2,147 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 水行舟</title>
-    <link>https://shuixingzhou.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on 水行舟</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <lastBuildDate>Wed, 13 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://shuixingzhou.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git</title>
-      <link>https://shuixingzhou.github.io/tags/git/</link>
+      <link>/tags/git/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/tags/git/</guid>
+      <guid>/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://shuixingzhou.github.io/tags/hugo/</link>
+      <link>/tags/hugo/</link>
       <pubDate>Sat, 24 Mar 2018 21:13:14 -0500</pubDate>
       
-      <guid>https://shuixingzhou.github.io/tags/hugo/</guid>
+      <guid>/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://shuixingzhou.github.io/tags/linux/</link>
+      <link>/tags/linux/</link>
       <pubDate>Sat, 05 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/tags/linux/</guid>
+      <guid>/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mysql</title>
-      <link>https://shuixingzhou.github.io/tags/mysql/</link>
+      <link>/tags/mysql/</link>
       <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/tags/mysql/</guid>
+      <guid>/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plot</title>
+      <link>/tags/plot/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/plot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>https://shuixingzhou.github.io/tags/python/</link>
+      <link>/tags/python/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/tags/python/</guid>
+      <guid>/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>https://shuixingzhou.github.io/tags/r/</link>
+      <link>/tags/r/</link>
       <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/tags/r/</guid>
+      <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R Markdown</title>
+      <link>/tags/r-markdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/r-markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rblogdown</title>
-      <link>https://shuixingzhou.github.io/tags/rblogdown/</link>
-      <pubDate>Sat, 24 Mar 2018 21:13:14 -0500</pubDate>
+      <link>/tags/rblogdown/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/tags/rblogdown/</guid>
+      <guid>/tags/rblogdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regression</title>
+      <link>/tags/regression/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/regression/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rnaseq</title>
-      <link>https://shuixingzhou.github.io/tags/rnaseq/</link>
+      <link>/tags/rnaseq/</link>
       <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/tags/rnaseq/</guid>
+      <guid>/tags/rnaseq/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sed</title>
-      <link>https://shuixingzhou.github.io/tags/sed/</link>
+      <link>/tags/sed/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/tags/sed/</guid>
+      <guid>/tags/sed/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ubuntu</title>
-      <link>https://shuixingzhou.github.io/tags/ubuntu/</link>
+      <link>/tags/ubuntu/</link>
       <pubDate>Sat, 05 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/tags/ubuntu/</guid>
+      <guid>/tags/ubuntu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>生活</title>
-      <link>https://shuixingzhou.github.io/tags/%E7%94%9F%E6%B4%BB/</link>
+      <link>/tags/%E7%94%9F%E6%B4%BB/</link>
       <pubDate>Sat, 05 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/tags/%E7%94%9F%E6%B4%BB/</guid>
+      <guid>/tags/%E7%94%9F%E6%B4%BB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>诗词</title>
-      <link>https://shuixingzhou.github.io/tags/%E8%AF%97%E8%AF%8D/</link>
+      <link>/tags/%E8%AF%97%E8%AF%8D/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/tags/%E8%AF%97%E8%AF%8D/</guid>
+      <guid>/tags/%E8%AF%97%E8%AF%8D/</guid>
       <description></description>
     </item>
     

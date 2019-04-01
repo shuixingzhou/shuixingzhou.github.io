@@ -5,13 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MySQL基础：常用命令整理</title>
 <meta name="description" content="personal website to trace my progress">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.40.1" />
 <meta property="og:title" content="MySQL基础：常用命令整理" />
-<meta property="og:description" content="MySQL是甲骨文旗下的一款开源的也是目前最为流行的数据库管理系统（DBMS,Database management system）。MySQL是一种典型的关系型数据库系统（RDBMS，Relational Database Management System)。" />
+<meta property="og:description" content="MySQL是甲骨文旗下的一款开源的也是目前最为流行的数据库管理系统（DBMS,Database management system）。MySQL是一种典型的关系型数据库系统（RDBMS，Relational Database Management System)。 create database dbname; # 创建数据库 show databases; # 显示当前连接下的所有数据库 use dbname; # 进入dbname数据库 create table tbname (id int, name char(20)) # 创建表tbname，该表有两个字段 show tables; # 显示当前数据库所有的表 desc tbname; # 显示tbname表的信息 describe tbname; # 显示tbname表的信息 show columns from tbname; # 显示tbname表的信息 show create table tbname; # 显示tbname表创建时的信息 insert into tbname (id, name) values (1, &#39;xiaoming&#39;); # 插入记录 select * from tbname; # 查询tbname表所有记录 select id,name from tbname where id=1; # 条件查询tbname表记录 delete from tbname; # 删除表中所有信息 drop table tbname; # 删除表 drop database dbname; # 删除数据库 update tbname set name=&#39;joe&#39; where id=1; # 更新数据 alter table tbname add score float(4) default &#39;0&#39;; # 添加字段 alter table tbname drop column column_name; # 删除字段 alter table tbname change score grade float(4); # 修改字段名 alter table tb_article modify column name varchar(20); # 修改字段类型 rename tbname to tbname_new; # 修改表名 select user(); # 显示当前用户 select database(); # 显示当前数据库名 select now()，current_date(); # 查询时间 show table status like &#39;tbname&#39;; # 显示表的状态 show version(); # 查看MySQL版本 source D:/test." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://shuixingzhou.github.io/post/mysql-basic-syntax/" />
+<meta property="og:url" content="/post/mysql-basic-syntax/" />
+
+
+
 <meta property="article:published_time" content="2018-03-25T00:00:00&#43;00:00"/>
+
 <meta property="article:modified_time" content="2018-03-25T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -59,7 +73,8 @@
 			</p>
 		</header>
 		<div class="post__content clearfix">
-			<p><code>MySQL</code>是甲骨文旗下的一款开源的也是目前最为流行的数据库管理系统（DBMS,Database management system）。<code>MySQL</code>是一种典型的关系型数据库系统（RDBMS，Relational Database Management System)。</p>
+			<p><code>MySQL</code>是甲骨文旗下的一款开源的也是目前最为流行的数据库管理系统（DBMS,Database management system）。<code>MySQL</code>是一种典型的关系型数据库系统（RDBMS，Relational Database Management System)。
+</p>
 
 <pre><code>create database dbname;  # 创建数据库
 show databases; # 显示当前连接下的所有数据库
@@ -95,7 +110,9 @@ source D:/test.sql;  # 导入sql数据库文件
 <ul>
 <li>关于<code>;</code>：如果没有，则会报错。可以用<code>\g</code>或者<code>\G</code>代替。</li>
 <li>关于大小写：MySQL忽略大小写。无论是语法还是命名大小写都不敏感。</li>
+</ul>/li>
 </ul>
+
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -139,11 +156,11 @@ source D:/test.sql;  # 导入sql数据库文件
 	<h4 class="widget__title">近期文章</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/rblogdown-article-post-test-again/">RBlogdown文章发布之再测试</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sed_tutorial/">sed学习要点</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/steps-to-python-decorators/">深入学习python装饰器</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/">NGS sequence analysis with R / Bioconductor: RNA-Seq workflow</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/pip-installation-problems/">pip安装路上的各种坑</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/windows-git-ssh/">Windows下生成git ssh公钥</a></li>
 		</ul>
 	</div>
 </div>
@@ -159,6 +176,7 @@ source D:/test.sql;  # 导入sql数据库文件
 			<li class="widget__item"><a class="widget__link" href="/categories/linux">Linux</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/mysql">Mysql</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/r">R</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/website">Website</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/%e7%94%9f%e6%b4%bb">生活</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/%e8%af%97%e8%af%8d">诗词</a></li>
@@ -192,9 +210,12 @@ source D:/test.sql;  # 导入sql数据库文件
 		<a class="widget__link widget__link--taglist" href="/tags/hugo" title="hugo">hugo</a>
 		<a class="widget__link widget__link--taglist" href="/tags/linux" title="linux">linux</a>
 		<a class="widget__link widget__link--taglist" href="/tags/mysql" title="mysql">mysql</a>
+		<a class="widget__link widget__link--taglist" href="/tags/plot" title="plot">plot</a>
 		<a class="widget__link widget__link--taglist" href="/tags/python" title="python">python</a>
 		<a class="widget__link widget__link--taglist" href="/tags/r" title="r">r</a>
+		<a class="widget__link widget__link--taglist" href="/tags/r-markdown" title="r-markdown">r-markdown</a>
 		<a class="widget__link widget__link--taglist" href="/tags/rblogdown" title="rblogdown">rblogdown</a>
+		<a class="widget__link widget__link--taglist" href="/tags/regression" title="regression">regression</a>
 		<a class="widget__link widget__link--taglist" href="/tags/rnaseq" title="rnaseq">rnaseq</a>
 		<a class="widget__link widget__link--taglist" href="/tags/sed" title="sed">sed</a>
 		<a class="widget__link widget__link--taglist" href="/tags/ubuntu" title="ubuntu">ubuntu</a>

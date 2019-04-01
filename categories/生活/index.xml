@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>生活 on 水行舟</title>
-    <link>https://shuixingzhou.github.io/categories/%E7%94%9F%E6%B4%BB/</link>
+    <link>/categories/%E7%94%9F%E6%B4%BB/</link>
     <description>Recent content in 生活 on 水行舟</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <lastBuildDate>Wed, 13 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://shuixingzhou.github.io/categories/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>毅力，为何如此绝望</title>
-      <link>https://shuixingzhou.github.io/life/despairing-perseverance/</link>
+      <link>/life/despairing-perseverance/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/life/despairing-perseverance/</guid>
+      <guid>/life/despairing-perseverance/</guid>
       <description>今天听了TED的一个视频，视频中说成功人士大多都具有很强的毅力。结合自己的经历，深以为然。
 毅力一直都是我渴望、但是又难以得到的东西。
 买了一些书籍，如《自控力》，来提高自己的毅力。拿起书本时，被书中的教导深深折服，放心书本数日，一切又回归平静。
@@ -25,11 +25,12 @@
     
     <item>
       <title>杂乱无章的心情</title>
-      <link>https://shuixingzhou.github.io/life/emotions-in-chaos/</link>
+      <link>/life/emotions-in-chaos/</link>
       <pubDate>Sat, 05 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/life/emotions-in-chaos/</guid>
-      <description>&lt;p&gt;心情如同窗外乱飞的柳絮，莫名其妙无处可着。肆无忌惮的消耗着本来朦胧的诗意，最终剩下的只有敬而远之的距离。&lt;/p&gt;</description>
+      <guid>/life/emotions-in-chaos/</guid>
+      <description>&lt;p&gt;心情如同窗外乱飞的柳絮，莫名其妙无处可着。肆无忌惮的消耗着本来朦胧的诗意，最终剩下的只有敬而远之的距离。
+&lt;/p&gt;</description>
     </item>
     
   </channel>

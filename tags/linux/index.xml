@@ -2,23 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on 水行舟</title>
-    <link>https://shuixingzhou.github.io/tags/linux/</link>
+    <link>/tags/linux/</link>
     <description>Recent content in Linux on 水行舟</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <lastBuildDate>Sat, 05 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://shuixingzhou.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ubuntu 18.04LTS更新日记</title>
-      <link>https://shuixingzhou.github.io/post/ubuntu-update-note/</link>
+      <link>/post/ubuntu-update-note/</link>
       <pubDate>Sat, 05 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/post/ubuntu-update-note/</guid>
+      <guid>/post/ubuntu-update-note/</guid>
       <description>&lt;p&gt;两年前因为好奇装上了&lt;b&gt;Ubuntu16.04LTS&lt;/b&gt;，之后一发不可收拾，从此走上了不折腾不舒服斯基的道路。参考网上资料、购买书籍或者自己瞎几把捣鼓，加固态硬盘，扩充内存条，装双系统等，在自己条件可及的情况下把这台老当益壮的惠普折腾的够呛，而自己也在&lt;code&gt;Linux&lt;/code&gt;这个坑里越陷越深。
-4月26号发布了期待已久的的&lt;b&gt;Ubuntu18.04LTS&lt;/b&gt;，第一时间也上手尝试了一下。&lt;/p&gt;</description>
+4月26号发布了期待已久的的&lt;b&gt;Ubuntu18.04LTS&lt;/b&gt;，第一时间也上手尝试了一下。
+&lt;/p&gt;</description>
     </item>
     
   </channel>

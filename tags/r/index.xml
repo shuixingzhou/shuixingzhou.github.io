@@ -2,41 +2,61 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on 水行舟</title>
-    <link>https://shuixingzhou.github.io/tags/r/</link>
+    <link>/tags/r/</link>
     <description>Recent content in R on 水行舟</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <lastBuildDate>Tue, 27 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://shuixingzhou.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Test on git addins in Rstudio</title>
-      <link>https://shuixingzhou.github.io/post/test-on-git-addins-in-rstudio/</link>
+      <link>/post/test-on-git-addins-in-rstudio/</link>
       <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/post/test-on-git-addins-in-rstudio/</guid>
-      <description>&lt;p&gt;Now i find a very interesting addins of Rstudio&amp;ndash;git. I used to use git as my version control tool. However never did i notice that Rstudio colected this funciton.&lt;/p&gt;</description>
+      <guid>/post/test-on-git-addins-in-rstudio/</guid>
+      <description>Now i find a very interesting addins of Rstudio&amp;ndash;git. I used to use git as my version control tool. However never did i notice that Rstudio colected this funciton. It is really interesting!
+There are some methods in Rstudio to use git addins.
+TODO: finish this later!
+later!</description>
     </item>
     
     <item>
       <title>Creating a New Theme</title>
-      <link>https://shuixingzhou.github.io/post/2018-03-24-creating-a-new-theme/</link>
+      <link>/post/2018-03-24-creating-a-new-theme/</link>
       <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/post/2018-03-24-creating-a-new-theme/</guid>
+      <guid>/post/2018-03-24-creating-a-new-theme/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
     
     <item>
       <title>利用Rblogdown建立个人博客网站</title>
-      <link>https://shuixingzhou.github.io/post/rblogdown-to-build-website/</link>
+      <link>/post/rblogdown-to-build-website/</link>
       <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/post/rblogdown-to-build-website/</guid>
-      <description>&lt;p&gt;一直都有建一个个人网站的打算，为此我还申请了域名、购买了主机。但是一直都没有找到合适的建站模板。此前尝试过织梦、Wordpress和django等，但都有各自的不理想之处。遇上&lt;code&gt;Rblogdown&lt;/code&gt;后算是一见倾心。今天终于完成了&lt;code&gt;Rblogdown&lt;/code&gt;建个人网站的项目，现在讲建站过程以及遇到的问题记录下来以便日后查询。&lt;/p&gt;</description>
+      <guid>/post/rblogdown-to-build-website/</guid>
+      <description>一直都有建一个个人网站的打算，为此我还申请了域名、购买了主机。但是一直都没有找到合适的建站模板。此前尝试过织梦、Wordpress和django等，但都有各自的不理想之处。遇上Rblogdown后算是一见倾心。今天终于完成了Rblogdown建个人网站的项目，现在讲建站过程以及遇到的问题记录下来以便日后查询。  1.软件准备 Rblogdown是基于HUGO技术的一个R扩展包，是谢益辉 大神为大家准备的又一个神兵利器。想要通过Rblogdown来建立自己的网站，首先要安装相关的程序。
+R与R IDE
+毫无疑问首先需要安装R语言， 同时R语言IDE个人推荐使用RStudio。然后需要安装我们的主角，Rblodown扩展包。采用RStudio和Rblogdown应该是一个捷径。
+我个人的平台以及相关安装包如下：
+sessionInfo()  Hugo程序安装
+可以到github(https://github.com/gohugoio/hugo/releases) 上下载与个人系统相对应的安装包。同时如果成功安装了Rblogdown扩展包也可以采用blogdown::install_hugo()来安装Hugo程序。
+网站主题
+个人多次失败的经验表明，虽好还是在建站之前选好主题。Hugo官网（https://themes.gohugo.io/） 展示了许多不错的主题，简约、炫酷、低调、奢华应有尽有，可以根据个人喜好选择。选定之后可以直接下载下来，当然也可以在建站的同时指定这一个主题也是可以。如果指定主题，那么建站时自动会帮我们下载这个主题。我采用的主题是Mainroad。
+2. 创建网站 当需要的各种软件准备好之后，就可以正是开始搭建自己的个人网站了。所有的操作均可以在RStudio中进行的。
+blogdown::new_site(dir = &amp;quot;.&amp;quot;, theme = &amp;quot;Vimux/Mainroad&amp;quot;)  就这么简单，个人的博客网站就这么建成了。但是现在还只是别人的网站，因为所有的网站文件均是别人的。 回到自己的工作目录，可以看到有以下目录和文件：
+archetypes config.toml #配置文件，修改网站名、作者名和个人简介等 content #存放新添加的文章 data index.Rmd layouts #网站布局文件 public #将content里的内容解析成html文件 static #存放css和js等文件 themes #主题  此时在RStudio中利用server site()命令可以预览创建的网站。可以在RStudio预览窗格预览，也可在以浏览器以本地主机地址预览http://127.0.0.1。 后一种方法需要注意分配的端口。
+3. 修改网站 要想让这个网站完全成为自己心目中所想的样子，还有一些工作要做。
+导航栏目
+导航栏目的更改是新手要面临的最基本也是最重要的难题之一。我在这个问题上被困了好久。依据主题建立的网站是这样的https://hugothemes.gitlab.io/mainroad/。 想要自己设置不同于模板的栏目，首先要在content目录下，新建想要作为主要导航栏目的文件夹。重点来了，新建文件夹之后还需要在每一个新建的文件夹下新建一个文件&amp;ndash;_index.md，否则将会出错。有些主题模板还需要在config.toml文件中进行导航栏目设置，或者在layouts文件夹下partial/menu.html中进行设置，而我采用的Mainroad模板根据content目录里的内容自动生成。
+格式或者样式调整
+采用的模板之前是灰色主基调加上暗红色的条线等，可以在主题模板文件夹下的css目录下的css文件中依据自己的爱好进行调整。
+4. 网站发布 如果没有自己的域名和主机，网站可以利用github的pages服务免费发布在GitHub网站上。具体操作如下：首先在github新建一个 以自己用户名为名字的仓库（repository）。在发布之前需要在配置文件config.toml中将baseurl修改为你的github的pages服务如https://&amp;lt;yourname&amp;gt;.github.io/。 然后进入public文件夹，利用git命令将建站文件提交即可。
+cd public git init git add -A git commit -m &amp;quot;first commit&amp;quot; git remote add origin https://github.</description>
     </item>
     
   </channel>

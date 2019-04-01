@@ -2,59 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>生活 on 水行舟</title>
-    <link>https://shuixingzhou.github.io/tags/%E7%94%9F%E6%B4%BB/</link>
+    <link>/tags/%E7%94%9F%E6%B4%BB/</link>
     <description>Recent content in 生活 on 水行舟</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <lastBuildDate>Sat, 05 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://shuixingzhou.github.io/tags/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>杂乱无章的心情</title>
-      <link>https://shuixingzhou.github.io/life/emotions-in-chaos/</link>
+      <link>/life/emotions-in-chaos/</link>
       <pubDate>Sat, 05 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/life/emotions-in-chaos/</guid>
-      <description>&lt;p&gt;心情如同窗外乱飞的柳絮，莫名其妙无处可着。肆无忌惮的消耗着本来朦胧的诗意，最终剩下的只有敬而远之的距离。&lt;/p&gt;</description>
+      <guid>/life/emotions-in-chaos/</guid>
+      <description>&lt;p&gt;心情如同窗外乱飞的柳絮，莫名其妙无处可着。肆无忌惮的消耗着本来朦胧的诗意，最终剩下的只有敬而远之的距离。
+&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>春天的美好与惆怅</title>
-      <link>https://shuixingzhou.github.io/life/depression-on-spring/</link>
+      <link>/life/depression-on-spring/</link>
       <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/life/depression-on-spring/</guid>
+      <guid>/life/depression-on-spring/</guid>
       <description>&lt;p&gt;院子里的桃花、樱花竞相开放，以各自最美好的姿态享受着春天的风和日丽，同时也为春天增加了别样的色彩。
-院子里的人来来去去，或者悄无声息的分别，或者大张旗鼓的离散，为这春天同样添加了不一样的味道。&lt;/p&gt;</description>
+院子里的人来来去去，或者悄无声息的分别，或者大张旗鼓的离散，为这春天同样添加了不一样的味道。
+&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>对家的思念</title>
-      <link>https://shuixingzhou.github.io/life/homesick-03-26/</link>
+      <link>/life/homesick-03-26/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/life/homesick-03-26/</guid>
-      <description>&lt;p&gt;作为一名尚未成家立业本该努力奋斗的少年，时不时总有抛开一切回到家里的想法。这是病，真的治。在英文中用&lt;code&gt;homesick&lt;/code&gt;来表达对思家念家之情，简直是太正确了！&lt;/p&gt;</description>
+      <guid>/life/homesick-03-26/</guid>
+      <description>作为一名尚未成家立业本该努力奋斗的少年，时不时总有抛开一切回到家里的想法。这是病，真的治。在英文中用homesick来表达对思家念家之情，简直是太正确了！ 如果要找一首表达思乡之情的古诗，除开《静夜思》外，现在能够脱口而出的就是贺知章的回乡偶书二首。
+离别家乡岁月多，近来人事半消磨。 唯有门前镜湖水，春风不改旧时波。  少小离家老大回，乡音未改鬓毛衰。 儿童相见不相识，笑问客从何处来。  家乡风景依旧，想来物是人非。逐日奔波，事无所成。大概此时对家乡的思念之情才会迸发而出一发不可收拾。
+拾。</description>
     </item>
     
     <item>
       <title>这一年的思念</title>
-      <link>https://shuixingzhou.github.io/life/missyou/</link>
+      <link>/life/missyou/</link>
       <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/life/missyou/</guid>
-      <description>&lt;p&gt;不知不觉间，出差的时间已经超过了一年。很难想想能够忍受这样分别的日子，更难想象这样的日子已经超过了一年。远方的人啊，并非是我成心，或许只是懦弱。愿你不像我思念你这样的思念我。&lt;/p&gt;</description>
+      <guid>/life/missyou/</guid>
+      <description>不知不觉间，出差的时间已经超过了一年。很难想想能够忍受这样分别的日子，更难想象这样的日子已经超过了一年。远方的人啊，并非是我成心，或许只是懦弱。愿你不像我思念你这样的思念我。 平生不会相思，才会相思，便害相思。 身似浮云，心如飞絮，气若游丝，空一缕馀香在此，盼千金游子何之。 证候来时，正是何时？灯半昏时，月半明时。  平时口拙嘴笨，难以表达内心的思念之情。唯有珍惜现在的时光，努力充实自己，但愿再聚时能够更加勇敢、更加坚强。
+车遥遥，马憧憧，均有东山东复东，安能奋飞逐西风。 愿我如星君如月，夜夜流光相皎洁。 月暂晦，星长明。 留明待月复，三五共盈盈。  阳光仍然很好，院落依旧寂静。从早晨的春寒料峭，到午后的日上栏杆，心情些许燥热。这北方的气候是在恼人，虽然在这里呆了这么久，但是心情和身体依旧双双受到煎熬。
+过几日杨柳或许吐出新芽，草地也会披上绿装。希望那时能够感受到似远方的风和日丽。
+丽。</description>
     </item>
     
     <item>
       <title>今天突然突然涌上心头的诗</title>
-      <link>https://shuixingzhou.github.io/life/poem-today-03-24/</link>
+      <link>/life/poem-today-03-24/</link>
       <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/life/poem-today-03-24/</guid>
-      <description>&lt;p&gt;今天周末，天气虽然很好，但是没有踏春的愿望。春风、杨柳与暖日于我如烟云，我这不解风情人啊。忙忙碌碌一天终于完成了网站并且部署到&lt;a href=&#34;https://shuixingzhou.github.io&#34;&gt;github&lt;/a&gt;上了，此刻心中多少还是有些成就感的。&lt;/p&gt;</description>
+      <guid>/life/poem-today-03-24/</guid>
+      <description>今天周末，天气虽然很好，但是没有踏春的愿望。春风、杨柳与暖日于我如烟云，我这不解风情人啊。忙忙碌碌一天终于完成了网站并且部署到github上了，此刻心中多少还是有些成就感的。 每当一个人的时候，无论是走路还是工作，我都会不自觉的把那些最近记忆比较深刻的诗词轻声背出来。虽然记忆深刻，但是也有卡顿的时候。现在将今天记忆比较深的诗词记录如下：
+春未老，风细柳斜斜。试上超然台上看，半壕春水一城花，烟雨暗千家。 寒食后，酒醒却咨嗟。休对故人思故国，且将新火试新茶。诗酒趁年华。  这是苏轼的一首《望江南》，描写的春天烟雨朦胧的景致。我在北方，虽然现在正是春天，但是很难有这种春雨连连的日子。之所以能够记起，大概是音律和谐，篇幅简单，而又与我出差在外的心境相合吧。
+晨起动征铎，客行悲故乡。 鸡声茅店月，人迹板桥霜。 槲叶落山路，枳花明驿墙。 因思杜陵梦，凫雁满回塘。  温庭筠的‘鸡声茅店月，人迹板桥霜’千古名句，很早就知道，但是整首诗却在近一段时间才记下来。这短短的十个字，描写了秋冬早晨的景色，动静相宜，如同白描的一幅朦胧的水墨画。
+纱窗日暖渐黄昏，金屋无人见泪痕。 寂寞空庭春欲晚，梨花满地不开门。  作为一个直男，这种闺怨诗之所以能够进入我的脑海完全不是因为共鸣（囧），我倒确实喜欢后两句的寂寥的环境。
+梦后楼台高锁，酒醒帘幕低垂。 去年春恨却来时，落花人独立，微雨燕双飞。 记得小频初见，两重心字罗衣。 琵琶弦上说相思，当时明月在，曾照彩云归。  ‘落花人独立，微雨燕双飞’在我最喜欢的诗词中应该能够排到前五。虽然这两句并非晏几道原创，但是放在他的词中毫无PS痕迹，这两句也因晏几道而广为人知，对于原创翁宏来说不知是喜是悲。
+羞日遮罗袖，愁春懒起妆。 易求无价宝，难得有情郎。 枕上潜垂泪，花间暗断肠。 既能窥宋玉，何必恨王昌。  古时才女本就不多，能有诗文传世更是少之又少。很庆幸还是有那么几位女性诗人、词人为古诗词添加了别用的光彩。&amp;rsquo;易求无价宝，难得有情郎&amp;rsquo;应该是人尽皆知了，记得这首诗的原因还是想把它推荐给家里领导，让她知道有情郎是多么的难得，也稍稍提高一下我在家里的地位。。。
+当然能够记起的诗词还有其他几首，但是如果今天都记录下来了，那么明天还有什么可写的呢？
+呢？</description>
     </item>
     
   </channel>

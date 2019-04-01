@@ -2,42 +2,64 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on 水行舟</title>
-    <link>https://shuixingzhou.github.io/categories/git/</link>
+    <link>/categories/git/</link>
     <description>Recent content in Git on 水行舟</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <lastBuildDate>Wed, 13 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://shuixingzhou.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Windows下生成git ssh公钥</title>
-      <link>https://shuixingzhou.github.io/post/windows-git-ssh/</link>
+      <link>/post/windows-git-ssh/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/post/windows-git-ssh/</guid>
-      <description>&lt;p&gt;Git是一款开源版本控制系统（Version Conrol System, VCS），由大神Linus用C写成。&lt;/p&gt;</description>
+      <guid>/post/windows-git-ssh/</guid>
+      <description>&lt;p&gt;Git是一款开源版本控制系统（Version Conrol System, VCS），由大神Linus用C写成。
+&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Test on git addins in Rstudio</title>
-      <link>https://shuixingzhou.github.io/post/test-on-git-addins-in-rstudio/</link>
+      <link>/post/test-on-git-addins-in-rstudio/</link>
       <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/post/test-on-git-addins-in-rstudio/</guid>
-      <description>&lt;p&gt;Now i find a very interesting addins of Rstudio&amp;ndash;git. I used to use git as my version control tool. However never did i notice that Rstudio colected this funciton.&lt;/p&gt;</description>
+      <guid>/post/test-on-git-addins-in-rstudio/</guid>
+      <description>Now i find a very interesting addins of Rstudio&amp;ndash;git. I used to use git as my version control tool. However never did i notice that Rstudio colected this funciton. It is really interesting!
+There are some methods in Rstudio to use git addins.
+TODO: finish this later!
+later!</description>
     </item>
     
     <item>
       <title>如何把本地项目上传到github上去？</title>
-      <link>https://shuixingzhou.github.io/post/2018-03-27-git-local-remote/</link>
+      <link>/post/2018-03-27-git-local-remote/</link>
       <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/post/2018-03-27-git-local-remote/</guid>
-      <description>&lt;p&gt;&lt;code&gt;Git&lt;/code&gt;作为最知名的开源版本控制系统,常用于快捷高效地处理各类项目。&lt;/p&gt;
-
-&lt;p&gt;一直纠结于如何快速的将本地项目推送到&lt;code&gt;github&lt;/code&gt;远程服务器上去，今天收集了部分资料，记录如下。&lt;/p&gt;</description>
+      <guid>/post/2018-03-27-git-local-remote/</guid>
+      <description>Git作为最知名的开源版本控制系统,常用于快捷高效地处理各类项目。
+一直纠结于如何快速的将本地项目推送到github远程服务器上去，今天收集了部分资料，记录如下。 1. 常用命令 git init
+首先进入项目根目录，初始化该项目，将项目加入git管理，该目录就是git的工作目录。运行该命令后会在根目录下新建一个.git的目录，用于保存所有的版本记录。
+关于工作目录下的文件状态：
+工作目录下面的所有文件都不外乎这两种状态：已跟踪或未跟踪。已跟踪的文件是指本来就被纳入版本控制管理的文件，在上次快照中有它们的记录，工作一段时间后，它们的状态可能是未更新，已修改或者已放入暂存区。而所有其他文件都属于未跟踪文件。它们既没有上次更新时的快照，也不在当前的暂存区域。初次克隆某个仓库时，工作目录中的所有文件都属于已跟踪文件，且状态为未修改。在编辑过某些文件之后，Git 将这些文件标为已修改。我们逐步把这些修改过的文件放到暂存区域，直到最后一次性提交所有这些暂存起来的文件，如此重复。  git add -A
+将根目录下的所有文件添加到暂存处（stage area）。
+git commit -m &amp;ldquo;first commit&amp;rdquo;
+上传更新以及注释信息。
+git remote add origin https://github.com/usrname/projectname.git
+将本地仓库与远程仓库关联起来。注意：采用ssh的方法如果没有在本地电脑存入证书会出现报错。
+git push -u origin master
+上传项目到远程仓库。注意，git push origin master实际是git push origin master:master的简写形式， 意为将本地master分支推送到远程master（origin:master）上去。
+git status
+查看git状态。
+git clone &amp;hellip;
+从远程服务器克隆仓库到本地。Git 支持许多数据传输协议，git://... 协议 http(s):// ...或者user@server:/path.git SSH传输协议。
+git fetch
+远程跟踪分支已更新(Git术语叫做commit)，需要将这些更新取回本地，这时就要用到git fetch命令。
+git pull &amp;hellip;
+该命令作用是取回远程主机某个分支的更新，再与本地的指定分支合并。git pull是git fetch后跟git merge FETCH_HEAD的缩写。
+2. 常见错误以及解决方法  使用git remote add .</description>
     </item>
     
   </channel>

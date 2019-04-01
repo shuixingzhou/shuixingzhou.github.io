@@ -5,17 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Git</title>
 <meta name="description" content="personal website to trace my progress">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.40.1" />
 <meta property="og:title" content="Git" />
 <meta property="og:description" content="personal website to trace my progress" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://shuixingzhou.github.io/categories/git/" />
+<meta property="og:url" content="/categories/git/" />
+
+
 
 <meta property="og:updated_time" content="2018-06-13T00:00:00&#43;00:00"/>
 
+
+
+
+
+
+
+
+
+
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-<link rel="alternate" type="application/rss+xml" title="水行舟 Feed" href="https://shuixingzhou.github.io/categories/git/index.xml">
+<link rel="alternate" type="application/rss+xml" title="水行舟 Feed" href="/categories/git/index.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
 <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 <script type="text/javascript" src="/js/scripts.js"></script>
@@ -61,7 +72,8 @@
 			</div>
 		</header>
 		<div class="list__excerpt">
-			<p>Git是一款开源版本控制系统（Version Conrol System, VCS），由大神Linus用C写成。</p>
+			<p>Git是一款开源版本控制系统（Version Conrol System, VCS），由大神Linus用C写成。
+</p>
 		</div>
 		<div class="list__footer">
 			<a class="list__footer-readmore btn" href="/post/windows-git-ssh/">阅读全文</a>
@@ -80,10 +92,10 @@
 			</div>
 		</header>
 		<div class="list__excerpt">
-			<p>Now i find a very interesting addins of Rstudio&ndash;git. I used to use git as my version control tool. However never did i notice that Rstudio colected this funciton.</p>
-		</div>
-		<div class="list__footer">
-			<a class="list__footer-readmore btn" href="/post/test-on-git-addins-in-rstudio/">阅读全文</a>
+			Now i find a very interesting addins of Rstudio&ndash;git. I used to use git as my version control tool. However never did i notice that Rstudio colected this funciton. It is really interesting!
+There are some methods in Rstudio to use git addins.
+TODO: finish this later!
+later!
 		</div>
 	</div>
 </article>
@@ -99,9 +111,27 @@
 			</div>
 		</header>
 		<div class="list__excerpt">
-			<p><code>Git</code>作为最知名的开源版本控制系统,常用于快捷高效地处理各类项目。</p>
-
-<p>一直纠结于如何快速的将本地项目推送到<code>github</code>远程服务器上去，今天收集了部分资料，记录如下。</p>
+			Git作为最知名的开源版本控制系统,常用于快捷高效地处理各类项目。
+一直纠结于如何快速的将本地项目推送到github远程服务器上去，今天收集了部分资料，记录如下。 1. 常用命令 git init
+首先进入项目根目录，初始化该项目，将项目加入git管理，该目录就是git的工作目录。运行该命令后会在根目录下新建一个.git的目录，用于保存所有的版本记录。
+关于工作目录下的文件状态：
+工作目录下面的所有文件都不外乎这两种状态：已跟踪或未跟踪。已跟踪的文件是指本来就被纳入版本控制管理的文件，在上次快照中有它们的记录，工作一段时间后，它们的状态可能是未更新，已修改或者已放入暂存区。而所有其他文件都属于未跟踪文件。它们既没有上次更新时的快照，也不在当前的暂存区域。初次克隆某个仓库时，工作目录中的所有文件都属于已跟踪文件，且状态为未修改。在编辑过某些文件之后，Git 将这些文件标为已修改。我们逐步把这些修改过的文件放到暂存区域，直到最后一次性提交所有这些暂存起来的文件，如此重复。  git add -A
+将根目录下的所有文件添加到暂存处（stage area）。
+git commit -m &ldquo;first commit&rdquo;
+上传更新以及注释信息。
+git remote add origin https://github.com/usrname/projectname.git
+将本地仓库与远程仓库关联起来。注意：采用ssh的方法如果没有在本地电脑存入证书会出现报错。
+git push -u origin master
+上传项目到远程仓库。注意，git push origin master实际是git push origin master:master的简写形式， 意为将本地master分支推送到远程master（origin:master）上去。
+git status
+查看git状态。
+git clone &hellip;
+从远程服务器克隆仓库到本地。Git 支持许多数据传输协议，git://... 协议 http(s):// ...或者user@server:/path.git SSH传输协议。
+git fetch
+远程跟踪分支已更新(Git术语叫做commit)，需要将这些更新取回本地，这时就要用到git fetch命令。
+git pull &hellip;
+该命令作用是取回远程主机某个分支的更新，再与本地的指定分支合并。git pull是git fetch后跟git merge FETCH_HEAD的缩写。
+2. 常见错误以及解决方法  使用git remote add .
 		</div>
 		<div class="list__footer">
 			<a class="list__footer-readmore btn" href="/post/2018-03-27-git-local-remote/">阅读全文</a>
@@ -121,11 +151,11 @@
 	<h4 class="widget__title">近期文章</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/rblogdown-article-post-test-again/">RBlogdown文章发布之再测试</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sed_tutorial/">sed学习要点</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/steps-to-python-decorators/">深入学习python装饰器</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/">NGS sequence analysis with R / Bioconductor: RNA-Seq workflow</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/pip-installation-problems/">pip安装路上的各种坑</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/windows-git-ssh/">Windows下生成git ssh公钥</a></li>
 		</ul>
 	</div>
 </div>
@@ -141,6 +171,7 @@
 			<li class="widget__item"><a class="widget__link" href="/categories/linux">Linux</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/mysql">Mysql</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/r">R</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/website">Website</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/%e7%94%9f%e6%b4%bb">生活</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/%e8%af%97%e8%af%8d">诗词</a></li>
@@ -174,9 +205,12 @@
 		<a class="widget__link widget__link--taglist" href="/tags/hugo" title="hugo">hugo</a>
 		<a class="widget__link widget__link--taglist" href="/tags/linux" title="linux">linux</a>
 		<a class="widget__link widget__link--taglist" href="/tags/mysql" title="mysql">mysql</a>
+		<a class="widget__link widget__link--taglist" href="/tags/plot" title="plot">plot</a>
 		<a class="widget__link widget__link--taglist" href="/tags/python" title="python">python</a>
 		<a class="widget__link widget__link--taglist" href="/tags/r" title="r">r</a>
+		<a class="widget__link widget__link--taglist" href="/tags/r-markdown" title="r-markdown">r-markdown</a>
 		<a class="widget__link widget__link--taglist" href="/tags/rblogdown" title="rblogdown">rblogdown</a>
+		<a class="widget__link widget__link--taglist" href="/tags/regression" title="regression">regression</a>
 		<a class="widget__link widget__link--taglist" href="/tags/rnaseq" title="rnaseq">rnaseq</a>
 		<a class="widget__link widget__link--taglist" href="/tags/sed" title="sed">sed</a>
 		<a class="widget__link widget__link--taglist" href="/tags/ubuntu" title="ubuntu">ubuntu</a>

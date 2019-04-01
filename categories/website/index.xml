@@ -2,40 +2,90 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Website on 水行舟</title>
-    <link>https://shuixingzhou.github.io/categories/website/</link>
+    <link>/categories/website/</link>
     <description>Recent content in Website on 水行舟</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Tue, 03 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://shuixingzhou.github.io/categories/website/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/website/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>RBlogdown文章发布之再测试</title>
+      <link>/post/rblogdown-article-post-test-again/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/rblogdown-article-post-test-again/</guid>
+      <description>&lt;p&gt;最近遇到一件很囧的事情，由于很忙（其实是很懒。。。），个人网站已经荒废了很久。最近偶有所感，想要重新拾掇起网站时竟然发现已经忘了怎么发布文章！
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>万网域名解析记录</title>
-      <link>https://shuixingzhou.github.io/post/domain-name-resolution/</link>
+      <link>/post/domain-name-resolution/</link>
       <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/post/domain-name-resolution/</guid>
-      <description>&lt;p&gt;采用的阿里云旗下万网域名。域名解析直接进入阿里云控制台选择域名点击&lt;code&gt;解析&lt;/code&gt;即可。&lt;/p&gt;</description>
+      <guid>/post/domain-name-resolution/</guid>
+      <description>采用的阿里云旗下万网域名。域名解析直接进入阿里云控制台选择域名点击解析即可。 一、记录类型 1. A记录： 将域名指向一个IPv4地址（例如：10.10.10.10），需要增加A记录
+2. CNAME记录： 如果将域名指向一个域名，实现与被指向域名相同的访问效果，需要增加CNAME记录
+3. MX记录： 建立电子邮箱服务，将指向邮件服务器地址，需要设置MX记录
+4. NS记录： 域名解析服务器记录，如果要将子域名指定某个域名服务器来解析，需要设置NS记录
+5. TXT记录： 可任意填写（可为空），文本长度限制为512，通常用做SPF记录（反垃圾邮件）使用
+6. AAAA记录： 将主机名（或域名）指向一个IPv6地址（例如：ff03:0:0:0:0:0:0:c1），需要添加AAAA记录
+7. SRV记录： 记录提供特定的服务的服务器。格式为：服务的名字.协议的类型（例如：_example-server._tcp）
+8. CAA CA证书颁发机构授权校验
+9. 显性URL： 将域名302重定向到另外一个地址，并且显示真实目标地址。将www.example.com 显性转发到www.hichina.com 后，访问www.example.com 时，地址栏显示的地址为：www.hichina.com）。
+10. 隐性URL： 将域名302重定向到另外一个地址，但是隐藏真实目标地址。例如：将www.net.cn 隐性转发到www.hichina.com后， 访问www.net.cn时， 地址栏显示的地址仍然为：www.net.cn。
+注意：选择需要的类型即可，无需所有都选上。常用的记录类型有A，CNAME。
+二、 主机记录 主记录就是域名前缀，与域名共同组成解析对象。常见如下：
+www：
+将域名解析为www.example.com，填写www；
+@：
+将域名解析为example.com（不带www），填写@或者不填写；
+mail：
+将域名解析为mail.example.com，用于解析邮箱服务器；
+* ：
+泛解析，所有子域名均被解析到统一地址（除单独设置的子域名解析）；
+二级域名：
+如：mail.example.com或abc.example.com，填写mail或abc；
+手机网站：
+如：m.example.com，填写m。
+三、记录值 记录值需要根据记录类型设置解析结果。
+ A主机记录和记录值需要填写服务器IP地址（必须为IPv4地址，例如：119.75.217.109）。如果IP地址的格式中带有端口，如：119.75.217.109:8080，则只添加119.75.217.109即可。
+ CNAME记录值填写空间服务商提供给您的域名（例如：hichina.com）。
+ MX记录值请填写邮件服务商提供给您的域名（例如：hichina.com）。
+ NS记录值，NS向下授权，请填写DNS域名（例如：example.hichina.com）。
+ TXT记录值可以随意填写文本（长度不能超过512，不支持反斜杠字符&amp;rdquo;\&amp;ldquo;），不可为空，一般用作企业邮箱的反垃圾邮件设置。
+ AAAA记录值请填写一个IPv6地址（例如：ff03:0:0:0:0:0:0:c1）。</description>
     </item>
     
     <item>
       <title>域名CNAME设置</title>
-      <link>https://shuixingzhou.github.io/post/cname-setting/</link>
+      <link>/post/cname-setting/</link>
       <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/post/cname-setting/</guid>
-      <description>&lt;p&gt;在&lt;code&gt;github pages&lt;/code&gt;和&lt;code&gt;netlify&lt;/code&gt;服务成功设置之后，我想通过&lt;code&gt;CNAME&lt;/code&gt;将这两个网站归并到我自己的域名之下，该域名之前解析到阿里云虚拟共享主机。很不幸，重新设置&lt;code&gt;CNAME&lt;/code&gt;结果失败。此后，新申请了一个域名，然后将新的域名解析到&lt;code&gt;github pages&lt;/code&gt;服务器上，结果可以正常运行。现在将这两次经历均记录如下。&lt;/p&gt;</description>
+      <guid>/post/cname-setting/</guid>
+      <description>在github pages和netlify服务成功设置之后，我想通过CNAME将这两个网站归并到我自己的域名之下，该域名之前解析到阿里云虚拟共享主机。很不幸，重新设置CNAME结果失败。此后，新申请了一个域名，然后将新的域名解析到github pages服务器上，结果可以正常运行。现在将这两次经历均记录如下。 1. 二级域名CNAME 起初，我的目的上将部署在github pages 和netlify的网站放在之前申请的域名之下以二级域名的形式统一管理。 假定原域名是example.top,现在采用CNAME将github pages网站放在原域名之下管理，如test.example.top。我期待的结果是当我在浏览器输入test.example.top时自动打开github pages网站。结果显示我想要的太多。example.top可以打开，但是test.example.top显示No Found。
+netlify设置就要简单的多了，现在域名控制台添加解析CNAME记录，将test1.example.top记录指向原网站sitename.netlify.com。然后在netlify配置页，添加一个Custom domains也就了test1.example.top就可了！ 然后，test1.example.top和sitename.netlify.com都可以进入网站。此处需要注意的是：以这两个域名进入网站之后浏览器地址栏显示各自的域名，而不是像github pages那么在浏览器地址栏都显示test.example.top。
+2. 新域名CNAME设置 历尽多次挫折之后，索性我又申请了一个新的域名，another.top，（好在现在这些莫名其妙的域名比较便宜），然后重新对域名进行解析。在域名控制台使用CNAME记录类型，分别将www和@解析到username.github.io。然后在github中在username.github.io根目录下添加一个CNAME文件（就是一个名字为CNAME没有扩展名的文件），文件内容很简单，就是another.top。注意：没有http://或者www等。
+设置完成之后，立刻满怀期待的在浏览器中输入another.top，结果依旧显示No Found。 我去，感觉被一盆冷水给浇成了落汤鸡。不爽的心情持续了十几分钟，心里终是不敢，又在浏览器中输入了another.top，竟然成功了！成功的连接到了username.github.io上的个人网站。成功的也让我一脸懵逼。多搜了几篇教程之后才发现解析是需要时间的！
+成功之后，发现无论在浏览器中输入another.top还是输入username.github.io结果都是显示another.top。在cmd终端ping一下，发现这两个域名结果一样。
+3. 意外的惊喜 就在我采用新的域名成功设置了CNAME之后，聪明如我[汗。。。]突然发现在我使用之前的那个域名，即example.top时好像忘了添加一个CNAME文件。按照新域名的流程，重新设置了原来那个域名之后，终于也成功了。
+浪费了自己这么多的时间，还让我重新申请了一个域名，我的感情我的钱啊！真狠不得给自己两耳光，当然还是舍不得啦。
+啦。</description>
     </item>
     
     <item>
       <title>部署个人网站到netlify服务器</title>
-      <link>https://shuixingzhou.github.io/post/test-on-netlify/</link>
+      <link>/post/test-on-netlify/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://shuixingzhou.github.io/post/test-on-netlify/</guid>
-      <description>&lt;p&gt;看到网上许多教程都讲静态网站托管到&lt;code&gt;netlify&lt;/code&gt;上,今天我也尝试了一下。&lt;/p&gt;</description>
+      <guid>/post/test-on-netlify/</guid>
+      <description>看到网上许多教程都讲静态网站托管到netlify上,今天我也尝试了一下。 1. 部署步骤 前期借助于HUGO、Rblogdown等工具成功创建了个人的静态网站。同时也成功的部署到了github pages服务上。在此前我已经尝试过将静态网站部署到netlify，但是总是遇到配置错误。今天搜到了一个更加详细的中文教程，重新尝试了一下果然成功。暂时mark一下，等有时间了在好好看看当初没什么总是配置错误。
+使用Github账号登陆Netlify 的官网，点击New site from Git， 选择要上传的的仓库。然后等待该服务器进行配置，过一段时间网站就建立好了。
+2. 个人疑惑 现在我已经成功的在netlify和github pages上成功的建立了自己的个人网站，那么这两个托管服务有哪些区别呢？初步来看，个人认为主要的区别是，github pages仅能部署一个网站，网站名与用户名必须一致，而netlify则可以托管多个站点。当然，这两个网站共同点都是能够自动同步github仓库里的更新！That is awesome!
+esome!</description>
     </item>
     
   </channel>

@@ -5,17 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hugo</title>
 <meta name="description" content="personal website to trace my progress">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.40.1" />
 <meta property="og:title" content="Hugo" />
 <meta property="og:description" content="personal website to trace my progress" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://shuixingzhou.github.io/categories/hugo/" />
+<meta property="og:url" content="/categories/hugo/" />
+
+
 
 <meta property="og:updated_time" content="2018-03-24T21:13:14-05:00"/>
 
+
+
+
+
+
+
+
+
+
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-<link rel="alternate" type="application/rss+xml" title="水行舟 Feed" href="https://shuixingzhou.github.io/categories/hugo/index.xml">
+<link rel="alternate" type="application/rss+xml" title="水行舟 Feed" href="/categories/hugo/index.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
 <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 <script type="text/javascript" src="/js/scripts.js"></script>
@@ -126,12 +137,7 @@ We&rsquo;ll start with creating a new site with a very basic template.
 			</div>
 		</header>
 		<div class="list__excerpt">
-			<p>Hugo uses the excellent <a href="http://golang.org/&gt;">go</a> <a href="http://golang.org/pkg/html/template/&gt;">html/template</a> library for
-its template engine. It is an extremely lightweight engine that provides a very
-small amount of logic. In our experience that it is just the right amount of
-logic to be able to create a good static website. If you have used other
-template systems from different languages or frameworks you will find a lot of
-similarities in go templates.</p>
+			Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
 		</div>
 		<div class="list__footer">
 			<a class="list__footer-readmore btn" href="/post/hugo-template-primer/">阅读全文</a>
@@ -150,7 +156,24 @@ similarities in go templates.</p>
 			</div>
 		</header>
 		<div class="list__excerpt">
-			<p>一直都有建一个个人网站的打算，为此我还申请了域名、购买了主机。但是一直都没有找到合适的建站模板。此前尝试过织梦、Wordpress和django等，但都有各自的不理想之处。遇上<code>Rblogdown</code>后算是一见倾心。今天终于完成了<code>Rblogdown</code>建个人网站的项目，现在讲建站过程以及遇到的问题记录下来以便日后查询。</p>
+			一直都有建一个个人网站的打算，为此我还申请了域名、购买了主机。但是一直都没有找到合适的建站模板。此前尝试过织梦、Wordpress和django等，但都有各自的不理想之处。遇上Rblogdown后算是一见倾心。今天终于完成了Rblogdown建个人网站的项目，现在讲建站过程以及遇到的问题记录下来以便日后查询。  1.软件准备 Rblogdown是基于HUGO技术的一个R扩展包，是谢益辉 大神为大家准备的又一个神兵利器。想要通过Rblogdown来建立自己的网站，首先要安装相关的程序。
+R与R IDE
+毫无疑问首先需要安装R语言， 同时R语言IDE个人推荐使用RStudio。然后需要安装我们的主角，Rblodown扩展包。采用RStudio和Rblogdown应该是一个捷径。
+我个人的平台以及相关安装包如下：
+sessionInfo()  Hugo程序安装
+可以到github(https://github.com/gohugoio/hugo/releases) 上下载与个人系统相对应的安装包。同时如果成功安装了Rblogdown扩展包也可以采用blogdown::install_hugo()来安装Hugo程序。
+网站主题
+个人多次失败的经验表明，虽好还是在建站之前选好主题。Hugo官网（https://themes.gohugo.io/） 展示了许多不错的主题，简约、炫酷、低调、奢华应有尽有，可以根据个人喜好选择。选定之后可以直接下载下来，当然也可以在建站的同时指定这一个主题也是可以。如果指定主题，那么建站时自动会帮我们下载这个主题。我采用的主题是Mainroad。
+2. 创建网站 当需要的各种软件准备好之后，就可以正是开始搭建自己的个人网站了。所有的操作均可以在RStudio中进行的。
+blogdown::new_site(dir = &quot;.&quot;, theme = &quot;Vimux/Mainroad&quot;)  就这么简单，个人的博客网站就这么建成了。但是现在还只是别人的网站，因为所有的网站文件均是别人的。 回到自己的工作目录，可以看到有以下目录和文件：
+archetypes config.toml #配置文件，修改网站名、作者名和个人简介等 content #存放新添加的文章 data index.Rmd layouts #网站布局文件 public #将content里的内容解析成html文件 static #存放css和js等文件 themes #主题  此时在RStudio中利用server site()命令可以预览创建的网站。可以在RStudio预览窗格预览，也可在以浏览器以本地主机地址预览http://127.0.0.1。 后一种方法需要注意分配的端口。
+3. 修改网站 要想让这个网站完全成为自己心目中所想的样子，还有一些工作要做。
+导航栏目
+导航栏目的更改是新手要面临的最基本也是最重要的难题之一。我在这个问题上被困了好久。依据主题建立的网站是这样的https://hugothemes.gitlab.io/mainroad/。 想要自己设置不同于模板的栏目，首先要在content目录下，新建想要作为主要导航栏目的文件夹。重点来了，新建文件夹之后还需要在每一个新建的文件夹下新建一个文件&ndash;_index.md，否则将会出错。有些主题模板还需要在config.toml文件中进行导航栏目设置，或者在layouts文件夹下partial/menu.html中进行设置，而我采用的Mainroad模板根据content目录里的内容自动生成。
+格式或者样式调整
+采用的模板之前是灰色主基调加上暗红色的条线等，可以在主题模板文件夹下的css目录下的css文件中依据自己的爱好进行调整。
+4. 网站发布 如果没有自己的域名和主机，网站可以利用github的pages服务免费发布在GitHub网站上。具体操作如下：首先在github新建一个 以自己用户名为名字的仓库（repository）。在发布之前需要在配置文件config.toml中将baseurl修改为你的github的pages服务如https://&lt;yourname&gt;.github.io/。 然后进入public文件夹，利用git命令将建站文件提交即可。
+cd public git init git add -A git commit -m &quot;first commit&quot; git remote add origin https://github.
 		</div>
 		<div class="list__footer">
 			<a class="list__footer-readmore btn" href="/post/rblogdown-to-build-website/">阅读全文</a>
@@ -170,11 +193,11 @@ similarities in go templates.</p>
 	<h4 class="widget__title">近期文章</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/rblogdown-article-post-test-again/">RBlogdown文章发布之再测试</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sed_tutorial/">sed学习要点</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/steps-to-python-decorators/">深入学习python装饰器</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/">NGS sequence analysis with R / Bioconductor: RNA-Seq workflow</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/pip-installation-problems/">pip安装路上的各种坑</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/windows-git-ssh/">Windows下生成git ssh公钥</a></li>
 		</ul>
 	</div>
 </div>
@@ -190,6 +213,7 @@ similarities in go templates.</p>
 			<li class="widget__item"><a class="widget__link" href="/categories/linux">Linux</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/mysql">Mysql</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/r">R</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/website">Website</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/%e7%94%9f%e6%b4%bb">生活</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/%e8%af%97%e8%af%8d">诗词</a></li>
@@ -223,9 +247,12 @@ similarities in go templates.</p>
 		<a class="widget__link widget__link--taglist" href="/tags/hugo" title="hugo">hugo</a>
 		<a class="widget__link widget__link--taglist" href="/tags/linux" title="linux">linux</a>
 		<a class="widget__link widget__link--taglist" href="/tags/mysql" title="mysql">mysql</a>
+		<a class="widget__link widget__link--taglist" href="/tags/plot" title="plot">plot</a>
 		<a class="widget__link widget__link--taglist" href="/tags/python" title="python">python</a>
 		<a class="widget__link widget__link--taglist" href="/tags/r" title="r">r</a>
+		<a class="widget__link widget__link--taglist" href="/tags/r-markdown" title="r-markdown">r-markdown</a>
 		<a class="widget__link widget__link--taglist" href="/tags/rblogdown" title="rblogdown">rblogdown</a>
+		<a class="widget__link widget__link--taglist" href="/tags/regression" title="regression">regression</a>
 		<a class="widget__link widget__link--taglist" href="/tags/rnaseq" title="rnaseq">rnaseq</a>
 		<a class="widget__link widget__link--taglist" href="/tags/sed" title="sed">sed</a>
 		<a class="widget__link widget__link--taglist" href="/tags/ubuntu" title="ubuntu">ubuntu</a>
