@@ -20,5 +20,23 @@
       <description>&lt;p&gt;采用的阿里云旗下万网域名。域名解析直接进入阿里云控制台选择域名点击&lt;code&gt;解析&lt;/code&gt;即可。&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>域名CNAME设置</title>
+      <link>https://shuixingzhou.github.io/post/cname-setting/</link>
+      <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/cname-setting/</guid>
+      <description>&lt;p&gt;在&lt;code&gt;github pages&lt;/code&gt;和&lt;code&gt;netlify&lt;/code&gt;服务成功设置之后，我想通过&lt;code&gt;CNAME&lt;/code&gt;将这两个网站归并到我自己的域名之下，该域名之前解析到阿里云虚拟共享主机。很不幸，重新设置&lt;code&gt;CNAME&lt;/code&gt;结果失败。此后，新申请了一个域名，然后将新的域名解析到&lt;code&gt;github pages&lt;/code&gt;服务器上，结果可以正常运行。现在将这两次经历均记录如下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>部署个人网站到netlify服务器</title>
+      <link>https://shuixingzhou.github.io/post/test-on-netlify/</link>
+      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/test-on-netlify/</guid>
+      <description>&lt;p&gt;看到网上许多教程都讲静态网站托管到&lt;code&gt;netlify&lt;/code&gt;上,今天我也尝试了一下。&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>sed学习要点</title>
+      <link>https://shuixingzhou.github.io/post/sed_tutorial/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/sed_tutorial/</guid>
+      <description>&lt;p&gt;The acronym &lt;code&gt;SED&lt;/code&gt; stands for &lt;strong&gt;Stream EDitor&lt;/strong&gt;. It is a simple yet powerful utility that parses the text and transforms it seamlessly. SED was developed during 1973–74 by Lee E. McMahon of Bell Labs. Today, it runs on all major operating systems.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>深入学习python装饰器</title>
       <link>https://shuixingzhou.github.io/post/steps-to-python-decorators/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
