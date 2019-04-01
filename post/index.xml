@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术文章 on 水行舟</title>
+    <link>https://shuixingzhou.github.io/post/</link>
+    <description>Recent content in 技术文章 on 水行舟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-hans</language>
+    <lastBuildDate>Mon, 09 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://shuixingzhou.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>深入学习python装饰器</title>
+      <link>https://shuixingzhou.github.io/post/steps-to-python-decorators/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/steps-to-python-decorators/</guid>
+      <description>&lt;p&gt;如果拜读过大牛的代码，会发现他们有用到热衷炫酷的装饰器。可是当去查看装饰器的定义时，各种定义和解释常常让人一头雾水。本教程逐步深入装饰器的原理，从最简单的函数开始，到多层装饰器，一步一步拨云见日，让人豁然开朗。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>NGS sequence analysis with R / Bioconductor: RNA-Seq workflow</title>
+      <link>https://shuixingzhou.github.io/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/</link>
+      <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;ATTENTION:&lt;/strong&gt; This post i found on the Internet, all rights reserved to the origin authors.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=&#34;http://biocluster.ucr.edu/~rkaundal/workshops/R_mar2016/RNAseq.html#integrated-development-environment-ide-for-r&#34;&gt;http://biocluster.ucr.edu/~rkaundal/workshops/R_mar2016/RNAseq.html#integrated-development-environment-ide-for-r&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>pip安装路上的各种坑</title>
+      <link>https://shuixingzhou.github.io/post/pip-installation-problems/</link>
+      <pubDate>Thu, 14 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/pip-installation-problems/</guid>
+      <description>&lt;p&gt;最近使用&lt;code&gt;pip&lt;/code&gt;安装python扩展包的时候，又遇到了许多问题，现在一一记录下来，以备日后查询。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Windows下生成git ssh公钥</title>
+      <link>https://shuixingzhou.github.io/post/windows-git-ssh/</link>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/windows-git-ssh/</guid>
+      <description>&lt;p&gt;Git是一款开源版本控制系统（Version Conrol System, VCS），由大神Linus用C写成。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 18.04LTS更新日记</title>
+      <link>https://shuixingzhou.github.io/post/ubuntu-update-note/</link>
+      <pubDate>Sat, 05 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/ubuntu-update-note/</guid>
+      <description>&lt;p&gt;两年前因为好奇装上了&lt;b&gt;Ubuntu16.04LTS&lt;/b&gt;，之后一发不可收拾，从此走上了不折腾不舒服斯基的道路。参考网上资料、购买书籍或者自己瞎几把捣鼓，加固态硬盘，扩充内存条，装双系统等，在自己条件可及的情况下把这台老当益壮的惠普折腾的够呛，而自己也在&lt;code&gt;Linux&lt;/code&gt;这个坑里越陷越深。
+4月26号发布了期待已久的的&lt;b&gt;Ubuntu18.04LTS&lt;/b&gt;，第一时间也上手尝试了一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MySQL存储过程和函数</title>
+      <link>https://shuixingzhou.github.io/post/mysql-stored-procedure-and-function/</link>
+      <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/mysql-stored-procedure-and-function/</guid>
+      <description>&lt;p&gt;存储过程（stored procedure）和函数（function）是事先经过编译并存储在数据库中的一段SQL语句的集合。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>万网域名解析记录</title>
+      <link>https://shuixingzhou.github.io/post/domain-name-resolution/</link>
+      <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/domain-name-resolution/</guid>
+      <description>&lt;p&gt;采用的阿里云旗下万网域名。域名解析直接进入阿里云控制台选择域名点击&lt;code&gt;解析&lt;/code&gt;即可。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>域名CNAME设置</title>
+      <link>https://shuixingzhou.github.io/post/cname-setting/</link>
+      <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/cname-setting/</guid>
+      <description>&lt;p&gt;在&lt;code&gt;github pages&lt;/code&gt;和&lt;code&gt;netlify&lt;/code&gt;服务成功设置之后，我想通过&lt;code&gt;CNAME&lt;/code&gt;将这两个网站归并到我自己的域名之下，该域名之前解析到阿里云虚拟共享主机。很不幸，重新设置&lt;code&gt;CNAME&lt;/code&gt;结果失败。此后，新申请了一个域名，然后将新的域名解析到&lt;code&gt;github pages&lt;/code&gt;服务器上，结果可以正常运行。现在将这两次经历均记录如下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Test on git addins in Rstudio</title>
+      <link>https://shuixingzhou.github.io/post/test-on-git-addins-in-rstudio/</link>
+      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/test-on-git-addins-in-rstudio/</guid>
+      <description>&lt;p&gt;Now i find a very interesting addins of Rstudio&amp;ndash;git. I used to use git as my version control tool. However never did i notice that Rstudio colected this funciton.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何把本地项目上传到github上去？</title>
+      <link>https://shuixingzhou.github.io/post/2018-03-27-git-local-remote/</link>
+      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/2018-03-27-git-local-remote/</guid>
+      <description>&lt;p&gt;&lt;code&gt;Git&lt;/code&gt;作为最知名的开源版本控制系统,常用于快捷高效地处理各类项目。&lt;/p&gt;
+
+&lt;p&gt;一直纠结于如何快速的将本地项目推送到&lt;code&gt;github&lt;/code&gt;远程服务器上去，今天收集了部分资料，记录如下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>部署个人网站到netlify服务器</title>
+      <link>https://shuixingzhou.github.io/post/test-on-netlify/</link>
+      <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/test-on-netlify/</guid>
+      <description>&lt;p&gt;看到网上许多教程都讲静态网站托管到&lt;code&gt;netlify&lt;/code&gt;上,今天我也尝试了一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>https://shuixingzhou.github.io/post/2018-03-24-hugoisforlovers/</link>
+      <pubDate>Sat, 24 Mar 2018 21:13:14 -0500</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/2018-03-24-hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at installing hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title>Migrate from jekyll</title>
+      <link>https://shuixingzhou.github.io/post/2018-03-24-migrate-from-jekyll/</link>
+      <pubDate>Sat, 24 Mar 2018 21:13:14 -0500</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/2018-03-24-migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>MySQL基础：常用命令整理</title>
+      <link>https://shuixingzhou.github.io/post/mysql-basic-syntax/</link>
+      <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/mysql-basic-syntax/</guid>
+      <description>&lt;p&gt;&lt;code&gt;MySQL&lt;/code&gt;是甲骨文旗下的一款开源的也是目前最为流行的数据库管理系统（DBMS,Database management system）。&lt;code&gt;MySQL&lt;/code&gt;是一种典型的关系型数据库系统（RDBMS，Relational Database Management System)。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Creating a New Theme</title>
+      <link>https://shuixingzhou.github.io/post/2018-03-24-creating-a-new-theme/</link>
+      <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/2018-03-24-creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Template Primer</title>
+      <link>https://shuixingzhou.github.io/post/hugo-template-primer/</link>
+      <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/hugo-template-primer/</guid>
+      <description>&lt;p&gt;Hugo uses the excellent &lt;a href=&#34;http://golang.org/&amp;gt;&#34;&gt;go&lt;/a&gt; &lt;a href=&#34;http://golang.org/pkg/html/template/&amp;gt;&#34;&gt;html/template&lt;/a&gt; library for
+its template engine. It is an extremely lightweight engine that provides a very
+small amount of logic. In our experience that it is just the right amount of
+logic to be able to create a good static website. If you have used other
+template systems from different languages or frameworks you will find a lot of
+similarities in go templates.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>利用Rblogdown建立个人博客网站</title>
+      <link>https://shuixingzhou.github.io/post/rblogdown-to-build-website/</link>
+      <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/rblogdown-to-build-website/</guid>
+      <description>&lt;p&gt;一直都有建一个个人网站的打算，为此我还申请了域名、购买了主机。但是一直都没有找到合适的建站模板。此前尝试过织梦、Wordpress和django等，但都有各自的不理想之处。遇上&lt;code&gt;Rblogdown&lt;/code&gt;后算是一见倾心。今天终于完成了&lt;code&gt;Rblogdown&lt;/code&gt;建个人网站的项目，现在讲建站过程以及遇到的问题记录下来以便日后查询。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

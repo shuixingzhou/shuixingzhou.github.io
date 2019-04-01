@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on 水行舟</title>
+    <link>https://shuixingzhou.github.io/categories/git/</link>
+    <description>Recent content in Git on 水行舟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-hans</language>
+    <lastBuildDate>Wed, 13 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://shuixingzhou.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Windows下生成git ssh公钥</title>
+      <link>https://shuixingzhou.github.io/post/windows-git-ssh/</link>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/windows-git-ssh/</guid>
+      <description>&lt;p&gt;Git是一款开源版本控制系统（Version Conrol System, VCS），由大神Linus用C写成。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Test on git addins in Rstudio</title>
+      <link>https://shuixingzhou.github.io/post/test-on-git-addins-in-rstudio/</link>
+      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/test-on-git-addins-in-rstudio/</guid>
+      <description>&lt;p&gt;Now i find a very interesting addins of Rstudio&amp;ndash;git. I used to use git as my version control tool. However never did i notice that Rstudio colected this funciton.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何把本地项目上传到github上去？</title>
+      <link>https://shuixingzhou.github.io/post/2018-03-27-git-local-remote/</link>
+      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/2018-03-27-git-local-remote/</guid>
+      <description>&lt;p&gt;&lt;code&gt;Git&lt;/code&gt;作为最知名的开源版本控制系统,常用于快捷高效地处理各类项目。&lt;/p&gt;
+
+&lt;p&gt;一直纠结于如何快速的将本地项目推送到&lt;code&gt;github&lt;/code&gt;远程服务器上去，今天收集了部分资料，记录如下。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

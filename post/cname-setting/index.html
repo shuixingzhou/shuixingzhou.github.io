@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>域名CNAME设置</title>
+<meta name="description" content="personal website to trace my progress">
+<meta name="generator" content="Hugo 0.54.0" />
+<meta property="og:title" content="域名CNAME设置" />
+<meta property="og:description" content="在github pages和netlify服务成功设置之后，我想通过CNAME将这两个网站归并到我自己的域名之下，该域名之前解析到阿里云虚拟共享主机。很不幸，重新设置CNAME结果失败。此后，新申请了一个域名，然后将新的域名解析到github pages服务器上，结果可以正常运行。现在将这两次经历均记录如下。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shuixingzhou.github.io/post/cname-setting/" />
+<meta property="article:published_time" content="2018-03-28T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-03-28T00:00:00&#43;00:00"/>
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="/js/scripts.js"></script>
+<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="水行舟" rel="home">
+						<h1 class="logo__title">水行舟</h1>
+						<h2 class="logo__tagline">Stay yong, stay foolish</h2>
+					</a>
+				</div>
+			</div>
+			
+<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="menu__list">
+		<li class="menu__item"><a class="menu__link" href="/">HOME</a></li>
+		<li class="menu__item"><a class="menu__link" href="/about/">关于我</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/">技术文章</a></li>
+		<li class="menu__item"><a class="menu__link" href="/life/">生活与诗</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper clearfix">
+
+<main class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		<header class="post__header clearfix">
+			<h1 class="post__title">域名CNAME设置</h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2018-03-28T00:00:00">2018-03-28</time>
+			</p>
+		</header>
+		<div class="post__content clearfix">
+			<p>在<code>github pages</code>和<code>netlify</code>服务成功设置之后，我想通过<code>CNAME</code>将这两个网站归并到我自己的域名之下，该域名之前解析到阿里云虚拟共享主机。很不幸，重新设置<code>CNAME</code>结果失败。此后，新申请了一个域名，然后将新的域名解析到<code>github pages</code>服务器上，结果可以正常运行。现在将这两次经历均记录如下。</p>
+
+<h2 id="1-二级域名-cname">1. 二级域名<code>CNAME</code></h2>
+
+<p>起初，我的目的上将部署在<code>github pages</code> 和<code>netlify</code>的网站放在之前申请的域名之下以二级域名的形式统一管理。 假定原域名是<code>example.top</code>,现在采用<code>CNAME</code>将<code>github pages</code>网站放在原域名之下管理，如<code>test.example.top</code>。我期待的结果是当我在浏览器输入<code>test.example.top</code>时自动打开<code>github pages</code>网站。结果显示我想要的太多。<code>example.top</code>可以打开，但是<code>test.example.top</code>显示<strong>No Found</strong>。</p>
+
+<p><code>netlify</code>设置就要简单的多了，现在域名控制台添加解析<code>CNAME</code>记录，将<code>test1.example.top</code>记录指向原网站<code>sitename.netlify.com</code>。然后在<code>netlify</code>配置页，添加一个<code>Custom domains</code>也就了<code>test1.example.top</code>就可了！ 然后，<code>test1.example.top</code>和<code>sitename.netlify.com</code>都可以进入网站。此处需要注意的是：以这两个域名进入网站之后浏览器地址栏显示各自的域名，而不是像<code>github pages</code>那么在浏览器地址栏都显示<code>test.example.top</code>。</p>
+
+<h2 id="2-新域名-cname-设置">2. 新域名<code>CNAME</code>设置</h2>
+
+<p>历尽多次挫折之后，索性我又申请了一个新的域名，<code>another.top</code>，（好在现在这些莫名其妙的域名比较便宜），然后重新对域名进行解析。在域名控制台使用<code>CNAME</code>记录类型，分别将<code>www</code>和<code>@</code>解析到<code>username.github.io</code>。然后在<code>github</code>中在<code>username.github.io</code>根目录下添加一个<code>CNAME</code>文件（就是一个名字为<code>CNAME</code>没有扩展名的文件），文件内容很简单，就是<code>another.top</code>。<strong>注意</strong>：没有<code>http://</code>或者<code>www</code>等。</p>
+
+<p>设置完成之后，立刻满怀期待的在浏览器中输入<code>another.top</code>，结果依旧显示<strong>No Found</strong>。 我去，感觉被一盆冷水给浇成了落汤鸡。不爽的心情持续了十几分钟，心里终是不敢，又在浏览器中输入了<code>another.top</code>，竟然成功了！成功的连接到了<code>username.github.io</code>上的个人网站。成功的也让我一脸懵逼。多搜了几篇教程之后才发现解析是需要时间的！</p>
+
+<p>成功之后，发现无论在浏览器中输入<code>another.top</code>还是输入<code>username.github.io</code>结果都是显示<code>another.top</code>。在cmd终端<code>ping</code>一下，发现这两个域名结果一样。</p>
+
+<h2 id="3-以外的惊喜">3. 以外的惊喜</h2>
+
+<p>就在我采用新的域名成功设置了<code>CNAME</code>之后，聪明如我[汗。。。]突然发现在我使用之前的那个域名，即<code>example.top</code>时好像忘了添加一个<code>CNAME</code>文件。按照新域名的流程，重新设置了原来那个域名之后，终于也成功了。</p>
+
+<p>浪费了自己这么多的时间，还让我重新申请了一个域名，我的感情我的钱啊！真狠不得给自己两耳光，当然还是舍不得啦。</p>
+		</div>
+		
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="shuixingzhou avatar" src="/img/wei.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About shuixingzhou</span>
+	</div>
+	<div class="authorbox__description">
+		伪装程序猿，工作中用到R，Python和MySQL等，因此自学----尚未成才。美梦来当马，诗酒趁年华!
+	</div>
+</div>
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/test-on-git-addins-in-rstudio/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">Test on git addins in Rstudio</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next col-1-2">
+		<a class="post-nav__link" href="/post/domain-name-resolution/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">万网域名解析记录</p></a>
+	</div>
+</nav>
+
+	
+</main>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">近期文章</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/steps-to-python-decorators/">深入学习python装饰器</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/">NGS sequence analysis with R / Bioconductor: RNA-Seq workflow</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/pip-installation-problems/">pip安装路上的各种坑</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/windows-git-ssh/">Windows下生成git ssh公钥</a></li>
+			<li class="widget__item"><a class="widget__link" href="/life/despairing-perseverance/">毅力，为何如此绝望</a></li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">文章分类</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/git">Git</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/hugo">Hugo</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/mysql">Mysql</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/netlify">Netlify</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/rnaseq">Rnaseq</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/website">Website</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e7%94%9f%e6%b4%bb">生活</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e8%af%97%e8%af%8d">诗词</a></li>
+		</ul>
+	</div>
+</div>
+	
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">联系</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/shuixingzhou" target="_blank">
+				<svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:2903669089@qq.com">
+				<svg class="widget-social__link-icon icon-mail" viewBox="0 0 416 288" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>2903669089@qq.com</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+	
+<div class="widget-taglist widget">
+	<h4 class="widget__title">标签</h4>
+	<div class="widget__content">
+		<a class="widget__link widget__link--taglist" href="/tags/git" title="git">git</a>
+		<a class="widget__link widget__link--taglist" href="/tags/hugo" title="hugo">hugo</a>
+		<a class="widget__link widget__link--taglist" href="/tags/linux" title="linux">linux</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mysql" title="mysql">mysql</a>
+		<a class="widget__link widget__link--taglist" href="/tags/python" title="python">python</a>
+		<a class="widget__link widget__link--taglist" href="/tags/r" title="r">r</a>
+		<a class="widget__link widget__link--taglist" href="/tags/rblogdown" title="rblogdown">rblogdown</a>
+		<a class="widget__link widget__link--taglist" href="/tags/rnaseq" title="rnaseq">rnaseq</a>
+		<a class="widget__link widget__link--taglist" href="/tags/ubuntu" title="ubuntu">ubuntu</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e7%94%9f%e6%b4%bb" title="生活">生活</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e8%af%97%e8%af%8d" title="诗词">诗词</a>
+	</div>
+</div>
+</aside>
+
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2019 水行舟. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+</body>
+</html>

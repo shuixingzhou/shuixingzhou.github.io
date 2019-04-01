@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NGS sequence analysis with R / Bioconductor: RNA-Seq workflow</title>
+<meta name="description" content="personal website to trace my progress">
+<meta name="generator" content="Hugo 0.54.0" />
+<meta property="og:title" content="NGS sequence analysis with R / Bioconductor: RNA-Seq workflow" />
+<meta property="og:description" content="ATTENTION: This post i found on the Internet, all rights reserved to the origin authors.
+
+URL: http://biocluster.ucr.edu/~rkaundal/workshops/R_mar2016/RNAseq.html#integrated-development-environment-ide-for-r" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shuixingzhou.github.io/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/" />
+<meta property="article:published_time" content="2018-07-08T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-07-08T00:00:00&#43;00:00"/>
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="/js/scripts.js"></script>
+<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="水行舟" rel="home">
+						<h1 class="logo__title">水行舟</h1>
+						<h2 class="logo__tagline">Stay yong, stay foolish</h2>
+					</a>
+				</div>
+			</div>
+			
+<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="menu__list">
+		<li class="menu__item"><a class="menu__link" href="/">HOME</a></li>
+		<li class="menu__item"><a class="menu__link" href="/about/">关于我</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/">技术文章</a></li>
+		<li class="menu__item"><a class="menu__link" href="/life/">生活与诗</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper clearfix">
+
+<main class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		<header class="post__header clearfix">
+			<h1 class="post__title">NGS sequence analysis with R / Bioconductor: RNA-Seq workflow</h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2018-07-08T00:00:00">2018-07-08</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/rnaseq" rel="category">RNAseq</a></span>
+			</p>
+		</header>
+		<div class="post__content clearfix">
+			<p><strong>ATTENTION:</strong> This post i found on the Internet, all rights reserved to the origin authors.</p>
+
+<p><strong>URL:</strong> <a href="http://biocluster.ucr.edu/~rkaundal/workshops/R_mar2016/RNAseq.html#integrated-development-environment-ide-for-r">http://biocluster.ucr.edu/~rkaundal/workshops/R_mar2016/RNAseq.html#integrated-development-environment-ide-for-r</a></p>
+
+<h2 id="contents">Contents</h2>
+
+<p>1 Integrated Development Environment (IDE) for R<br />
+2 Bioconductor<br />
+2.1 What is Bioconductor<br />
+2.2 Install Bioconductor Packages<br />
+2.3 Update Installed Bioconductor Packages<br />
+2.4 Upgrading installed Bioconductor packages<br />
+2.5 Bioconductor Workflows<br />
+2.5.1 Basic Workflows<br />
+2.5.2 Advanced Workflows<br />
+3 Overview of RNA-Seq<br />
+3.1 RNA-Seq Technology<br />
+3.2 NGS data types<br />
+3.2.1 Raw: Sequencing Reads (FASTQ)<br />
+3.2.2 Derived<br />
+3.3 Analysis Workflow of RNA-Seq Gene Expression Data<br />
+3.4 Important Considerations for NGS Alignments<br />
+3.5 Normalization<br />
+3.5.1 Careful with RPKM/FPKM Values<br />
+3.5.2 RNA-Seq Data Normalization Methods<br />
+3.6 Software for RNA-Seq DEG Analysis<br />
+4 RNA-Seq Analysis<br />
+4.1 Data Sets and Experimental Variables<br />
+4.1.1 Structure of targets file<br />
+4.1.2 Structure of param file and SYSargs container<br />
+4.2 Read Preprocessing<br />
+4.3 FASTQ quality report<br />
+4.4 Alignments<br />
+4.4.1 Align Reads with TopHat2<br />
+4.4.2 Align Reads with Rsubread<br />
+4.5 Alignment summary<br />
+4.5.1 Create symbolic links for viewing BAM files in IGV<br />
+4.6 Read counting<br />
+4.6.1 Create txdb<br />
+4.6.2 Read Counting with summarizeOverlaps<br />
+4.6.3 Simple RPKM Normalization<br />
+4.7 Sample-wise correlation analysis<br />
+4.7.1 Clustering of samples using RPKM expression values<br />
+4.7.2 Clustering of samples with rlog values<br />
+4.8 Analysis of differentially expressed genes (DEGs)<br />
+4.8.1 DEG analysis with edgeR<br />
+4.8.2 DEG analysis with DESeq2<br />
+4.9 Venn Diagrams<br />
+4.10 GO term enrichment analysis<br />
+4.10.1 Obtain gene-to-GO mappings (Part I)<br />
+4.10.2 Batch GO term enrichment analysis (Part II)<br />
+4.10.3 Plot the batch GO term results (Part III)<br />
+4.11 Gene-wise clustering<br />
+4.12 View Results in IGV<br />
+5 Version information<br />
+6 References</p>
+
+<h2 id="1-integrated-development-environment-ide-for-r">1. Integrated Development Environment (IDE) for R</h2>
+
+<p>i. RStudio: a new Alternative Working Environment for R that works well for beginners and developers (Homepage)
+<img src="/post/2018-07-08-ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow_files/rstudio.jpg" alt="" /></p>
+
+<p><strong>Some useful keyboard shortcuts:</strong></p>
+
+<ul>
+<li>Ctrl+Enter (run current line code / selection)</li>
+<li>Ctrl+Shift+C (comment / uncomment current line / selection)</li>
+<li>Ctrl+2 (move cursor to console)</li>
+<li>see more shortcuts at <a href="https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts">Link</a></li>
+</ul>
+
+<h2 id="2-bioconductor">2. Bioconductor</h2>
+
+<h3 id="2-1-what-is-bioconductor">2.1 What is Bioconductor</h3>
+
+<ul>
+<li>Bioconductor provides R packages for the analysis of genomic data, tools for analysis of data from next-generation high-throughput sequencing methods (<a href="https://www.bioconductor.org/">Link</a>)<br />
+
+<ul>
+<li>1104 packages for bioscience data analysis (as of March 10, 2016)</li>
+<li>active user community, open source and open development</li>
+<li>two releases each year</li>
+</ul></li>
+<li>Statistical analysis: large data, technological artifacts, designed experiments; rigorous</li>
+<li>Comprehension: biological context, visualization, reproducibility</li>
+<li>High-throughput
+
+<ul>
+<li>Sequencing: RNASeq, ChIPSeq, variants, copy number, …</li>
+<li>Microarrays: expression, SNP, …</li>
+<li>Flow cytometry, proteomics, images, …
+<br /></li>
+</ul></li>
+</ul>
+
+<p>Packages, vignettes, work flows</p>
+
+<ul>
+<li>‘Release’ (every six months) and ‘devel’ branches</li>
+<li>Choose from 1104 packages:
+
+<ul>
+<li>Discover packages via biocViews</li>
+<li>Each Package has a Package ‘landing page’ with Title, author / maintainer, short description, citation, installation instructions, shields, documentation, download statistics</li>
+<li>All user-visible functions have help pages, most with runnable examples</li>
+<li>‘Vignettes’ an important feature in Bioconductor – narrative documents illustrating how to use the package, with integrated code</li>
+</ul></li>
+</ul>
+
+<p>Helpful Links</p>
+
+<ul>
+<li>Documentation <a href="http://bioconductor.org/help/course-materials/">Previous Course Material</a>, <a href="http://bioconductor.org/help/workflows/">Workflows</a>, <a href="https://www.youtube.com/user/bioconductor">Videos</a>, <a href="http://bioconductor.org/developers/">Developers</a></li>
+<li>Ask a question <a href="https://support.bioconductor.org/">Support site</a></li>
+<li>Connect with Bioc <a href="https://twitter.com/Bioconductor">Twitter</a>, <a href="http://bioconductor.org/help/newsletters/2015_July/">Newsletter</a><br /></li>
+</ul>
+
+<h3 id="2-2-install-bioconductor-packages">2.2 Install Bioconductor Packages</h3>
+
+<p>Use the <code>biocLite.R</code> script to install Bioconductor packages. To install core packages, type the following in an R command window:</p>
+
+<pre><code>source(&quot;http://bioconductor.org/biocLite.R&quot;)  
+biocLite()
+</code></pre>
+
+<p>Install specific packages, e.g., “GenomicFeatures” and “AnnotationDbi”, with</p>
+
+<pre><code>biocLite(c(&quot;GenomicFeatures&quot;, &quot;AnnotationDbi&quot;))
+</code></pre>
+
+<h3 id="2-3-update-installed-bioconductor-packages">2.3 Update Installed Bioconductor Packages</h3>
+
+<p>Bioconductor packages, especially those in the development branch, are updated fairly regularly. To identify packages requiring update within your version of Bioconductor, start a new session of R and enter</p>
+
+<pre><code>source(&quot;http://bioconductor.org/biocLite.R&quot;)
+biocLite()                  ## R version 3.0 or later
+</code></pre>
+
+<h3 id="2-4-upgrading-installed-bioconductor-packages">2.4 Upgrading installed Bioconductor packages</h3>
+
+<p>Some versions of R support more than one version of Bioconductor. To use the latest version of Bioconductor for your version of R, enter</p>
+
+<pre><code>source(&quot;http://bioconductor.org/biocLite.R&quot;)
+biocLite(&quot;BiocUpgrade&quot;)     ## R version 2.15 or later
+</code></pre>
+
+<p>Read the help page for <code>?BiocUpgrade</code> for additional details. Remember that more recent versions of Bioconductor may be available if your version of R is out-of-date.</p>
+
+<h3 id="2-5-bioconductor-workflows">2.5 Bioconductor Workflows</h3>
+
+<p>Bioconductor provides software to help analyze diverse high-throughput genomic data. Common workflows include:</p>
+
+<h4 id="2-5-1-basic-workflows">2.5.1 Basic Workflows</h4>
+
+<ul>
+<li>Sequence Analysis: Import fasta, fastq, BAM, gff, bed, wig, and other sequence formats. Trim, transform, align, and manipulate sequences. Perform quality assessment, ChIP-seq, differential expression, RNA-seq, and other workflows. Access the Sequence Read Archive.</li>
+<li>Oligonucleotide Arrays: Import Affymetrix, Illumina, Nimblegen, Agilent, and other platforms. Perform quality assessment, normalization, differential expression, clustering, classification, gene set enrichment, genetical genomics and other workflows for expression, exon, copy number, SNP, methylation and other assays. Access GEO, ArrayExpress, Biomart, UCSC, and other community resources.</li>
+<li>Annotation Resources: Introduction to using gene, pathway, gene ontology, homology annotations and the AnnotationHub. Access GO, KEGG, NCBI, Biomart, UCSC, vendor, and other sources.</li>
+<li>Annotating Genomic Ranges: Represent common sequence data types (e.g., from BAM, gff, bed, and wig files) as genomic ranges for simple and advanced range-based queries.</li>
+<li>Annotating Genomic Variants: Read and write VCF files. Identify structural location of variants and compute amino acid coding changes for non-synonymous variants. Use SIFT and PolyPhen database packages to predict consequence of amino acid coding changes.</li>
+<li>Changing genomic coordinate systems: rtracklayer, etc.</li>
+</ul>
+
+<h4 id="2-5-2-advanced-workflows">2.5.2 Advanced Workflows</h4>
+
+<ul>
+<li><strong>RNA-Seq workflow:</strong> gene-level exploratory analysis and differential expression</li>
+<li>High Throughput Assays: Import, transform, edit, analyze and visualize flow cytometric, mass spec, HTqPCR, cell-based, and other assays</li>
+<li>Mass spectrometry and proteomics</li>
+<li>Transcription Factor Binding: Finding Candidate Binding Sites for Known Transcription Factors via Sequence Matching.</li>
+<li>Cloud-enabled cis-eQTL search and annotation</li>
+<li>Differential Binding from ChIP-seq data.</li>
+</ul>
+
+<h2 id="3-overview-of-rna-seq">3 Overview of RNA-Seq</h2>
+
+<p>RNA-seq is a high resolution Next-Generation Sequencing (NGS) method to assess the transcriptome of an organism and compare transcriptional changes between organisms / treatments to ascertain specific pathways / genes that are moving in response. With this powerful approach, one can:
+- Measure gene expression,
+- Discover and annotate complete transcripts,
+- Characterize alternative splicing and polyadenylation.</p>
+
+<p>The types of information that can be gained from RNA-seq can be divided into two broad categories: qualitative and quantitative.</p>
+
+<p><strong>Qualitative data</strong> includes identifying expressed transcripts, and identifying exon/intron boundaries, transcriptional start sites (TSS), and poly-A sites. Here, we can refer to this type of information as “annotation”.</p>
+
+<p><strong>Quantitative data</strong> includes measuring differences in expression, alternative splicing, alternative TSS, and alternative polyadenylation between two or more treatments or groups. Here we focus specifically on experiments to measure differential gene expression (DGE).</p>
+
+<p>These two types of data are related and to some extent, are inseparable. For instance, high quality annotation can lead to greater accuracy in mapping which can lead to the higher quality measures of gene expression. Similarly, accurate annotation requires some degree of quantification.</p>
+
+<p>Today, we will walk through a gene-level RNA-seq differential expression workflow using Bioconductor packages. We will start from some sample FASTQ files, see how these were aligned to the reference genome, and prepare a count matrix which tallies the number of RNA-seq reads within each gene for each sample. We will then perform quality assessment and explore the relationship between samples, perform differential gene expression analysis, and visually explore the results.</p>
+
+<h3 id="3-1-rna-seq-technology">3.1 RNA-Seq Technology</h3>
+
+<p>A typical RNA-seq experiment consists of the following steps:
+<img src="/post/2018-07-08-ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow_files/rnaseq workflow1.png" alt="" />
+<img src="/post/2018-07-08-ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow_files/rnaseq workflow2.png" alt="Figure 1: Overview of RNA-seq technology." />
+Figure 1: Overview of RNA-seq technology.</p>
+
+<h3 id="3-2-ngs-data-types">3.2 NGS data types</h3>
+
+<h4 id="3-2-1-raw-sequencing-reads-fastq">3.2.1 Raw: Sequencing Reads (FASTQ)</h4>
+
+<p><img src="/post/2018-07-08-ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow_files/fastq.jpg" alt="" /></p>
+
+<ul>
+<li>A FASTQ file normally uses four lines per sequence.</li>
+<li>Line 1 begins with a ‘@’ character and is followed by a sequence identifier.</li>
+<li>Line 2 is the raw sequence letters.</li>
+<li>Line 3 begins with a ‘+’ character, is optionally followed by the same sequence identifier.</li>
+<li>Line 4 encodes the Phred quality values for the sequence in line 2, each value represents the error probability of a given base call.</li>
+</ul>
+
+<p><strong>FASTQ Quality Scores:</strong></p>
+
+<ul>
+<li>Quality score represents the error probability of a given basecall</li>
+<li>In a FASTQ file, quality scores are often represented using the ASCII alphabet</li>
+<li>For example, a Phred score of 40 can be represented as the ASCII char “I” (40+33= ASCII #73), and an Illumina score of 40 as “h” (40+64=ASCII #104)</li>
+<li>The range of scores will depend on the technology and the base caller used, but will typically be up to 40.</li>
+</ul>
+
+<h4 id="3-2-2-derived">3.2.2 Derived</h4>
+
+<ul>
+<li><p>Alignments against reference genome</p>
+
+<ul>
+<li>SAM / BAM: Sequence Alignment Map (SAM) is a tab-delimited alignment format consisting of a header section (lines starting with @) and an alignment section with 11 columns (<a href="https://samtools.github.io/hts-specs/SAMv1.pdf">Link</a>). BAM is the compressed, indexed and binary version of this format. The below sample alignment contains the following features: (1) bases in lower cases are clipped from the alignment; (2) read r001/1 and r001/2 constitute a read pair; (3) r003 is a chimeric read; (4) r004 represents a split alignment.
+<img src="/post/2018-07-08-ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow_files/sam.png" alt="" />
+<img src="/post/2018-07-08-ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow_files/sam2.jpg" alt="" /></li>
+</ul></li>
+
+<li><p>Annotations</p>
+
+<ul>
+<li>GFF/GTF
+<img src="/post/2018-07-08-ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow_files/GFF.png" alt="" /></li>
+<li>GFF3
+<img src="/post/2018-07-08-ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow_files/GFF3.png" alt="" /></li>
+</ul></li>
+</ul>
+
+<h3 id="3-3-analysis-workflow-of-rna-seq-gene-expression-data">3.3 Analysis Workflow of RNA-Seq Gene Expression Data</h3>
+
+<ol>
+<li>Alignment of RNA reads to reference
+
+<ul>
+<li>Reference can be genome or transcriptome.</li>
+</ul></li>
+<li>Count reads overlapping with annotation features of interest
+
+<ul>
+<li>Most common: counts for exonic gene regions, but many viable alternatives exist here: counts per exons, genes, introns, etc.</li>
+</ul></li>
+<li>Normalization
+
+<ul>
+<li>Main adjustment for sequencing depth and compositional bias.</li>
+</ul></li>
+<li>Identification of Differentially Expressed Genes (DEGs)
+
+<ul>
+<li>Identification of genes with significant expression differences.</li>
+<li>Identification of expressed genes possible for strongly expressed ones.</li>
+</ul></li>
+<li>Specialty applications
+
+<ul>
+<li>Splice variant discovery (semi-quantitative), gene discovery, antisense expressions, etc.</li>
+</ul></li>
+<li>Cluster Analysis
+
+<ul>
+<li>Identification of genes with similar expression profiles across many samples.</li>
+</ul></li>
+<li>Enrichment Analysis of Functional Annotations
+
+<ul>
+<li>Gene ontology analysis of obtained gene sets from steps 5-6.
+<br /></li>
+</ul></li>
+</ol>
+
+<h3 id="3-4-important-considerations-for-ngs-alignments">3.4 Important Considerations for NGS Alignments</h3>
+
+<ul>
+<li>The primary goal of Differential Gene Expression (DGE) is to quantitatively measure differences in the levels of transcripts between two or more treatments or groups.</li>
+<li>At one level, this is as simple as comparing the counts for reads that come from each transcript. However, there is no way to know how accurately such counts reflect what was actually present in the original sample, and there is no indication of how widely expression normally varies in a given group or without treatment. Therefore, in order to accurately interpret differences in read counts, one must also obtain information regarding the variances that are associated with these numbers; biological replicates.</li>
+<li>In NGS, we usually want to find the origin of reads (NG sequences) in a reference genome or transcriptome. Thus, we are mostly interested in finding the best scoring or multiple best scoring locations for each read, but not lower scoring alternative solutions as in paralog/ortholog search applications.</li>
+<li><strong>Ambiguous mappings</strong> should be removed, because there is no evidence for their origin. However, for certain applications one needs to include them, e.g. when mapping RNA-Seq reads against transcript sequences instead of genome.</li>
+</ul>
+
+<h3 id="3-5-normalization">3.5 Normalization</h3>
+
+<ul>
+<li>Libraries differ in size (total counted reads per sample) for un-interesting reasons; we need to account for differences in library size in statistical analysis.</li>
+<li>Total number of counted reads per sample is not a good estimate of library size. It is un-necessarily influenced by regions with large counts, and can introduce bias and correlation across genes. Instead, use a robust measure of library size that takes account of skew in the distribution of counts (simplest: trimmed geometric mean).</li>
+<li>Library size (total number of counted reads) differs between samples, and should be included as a statistical offset in analysis of differential expression, rather than ‘dividing by’ the library size early in an analysis.</li>
+</ul>
+
+<h4 id="3-5-1-careful-with-rpkm-fpkm-values">3.5.1 Careful with RPKM/FPKM Values</h4>
+
+<p>RPKM Concept (FPKM is paired-end version of it)
+- RPKM (FPKM): reads (fragments) per kb per million mapped reads
+- For a given gene, larger counts imply more information; RPKM etc., treat all estimates as equally informative
+- RPKM/FPKM are not suitable for statistical testing. Why?
+- Consider the following example: in two libraries, each with one million reads, gene X may have 10 reads for treatment A and 5 reads for treatment B, while it is 100x as many after sequencing 100 millions reads from each library. In the latter case, we can be much more confident that there is a true difference between the two treatments than in the first one. However, the RPKM values would be the same for both scenarios.
+- Thus, RPKM/FPKM are useful for reporting expression values, but not for statistical testing!</p>
+
+<p>Programs like <code>edgeR</code> and <code>DESeq2</code> want to make use of the count nature of RNA-Seq data to increase statistical power. See here a simplified toy example:</p>
+
+<p><strong>Scenario 1:</strong> a 30000-bp transcript has 1000 counts in sample A and 700 counts in sample B.</p>
+
+<p><strong>Scenario 2:</strong> a 300-bp transcript has 10 counts in sample A and 7 counts in sample B.</p>
+
+<p>Assume that the sequencing depths are the same in both samples and both scenarios. Then the RPKM is the same in sample A in both scenarios, and in sample B in both scenarios. In scenario A, we can be more confident that there is a true difference in the expression level than in scenario B (although we would want replicates of course).</p>
+
+<p>The following should make it more clear:
+<img src="/post/2018-07-08-ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow_files/rpkm.png" alt="" />
+<img src="/post/2018-07-08-ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow_files/rpkm2.png" alt="" /></p>
+
+<p>Every stack of the bar plot represents the number of counts of one gene. In this example you have 1.5 more depth in condition B compared to condition A. Only one gene (red) is differentially expressed. With the RPKM normalization, all the other genes will look downregulated in the second sample (which is wrong). The size-factor normalization can instead produce values which are stable for all the genes (<a href="http://bioconductor.org/packages/release/bioc/manuals/DESeq2/man/DESeq2.pdf">implemented in DESeq2</a>).</p>
+
+<h4 id="3-5-2-rna-seq-data-normalization-methods">3.5.2 RNA-Seq Data Normalization Methods</h4>
+
+<ul>
+<li><strong>Total count (TC)</strong>: Gene counts are divided by the total number of mapped reads (or library size) associated with their lane and multiplied by the mean total count across all the samples of the dataset.</li>
+<li><strong>Upper Quartile (UQ)</strong>: Very similar in principle to TC, the total counts are replaced by the upper quartile of counts different from 0 in the computation of the normalization factors.</li>
+<li>Median (Med)**: Also similar to TC, the total counts are replaced by the median counts different from 0 in the computation of the normalization factors. That is, the median is calculated as the median of gene counts of all runs.</li>
+<li><strong>DESeq</strong>: This normalization method is included in the DESeq Bioconductor package and is based on the hypothesis that most genes are not DE. The method is based on a negative binomial distribution model, with variance and mean linked by local regression, and presents an implementation that gives scale factors. Within the DESeq package, and with the  estimateSizeFactorsForMatrix function, scaling factors can be calculated for each run. After dividing gene counts by each scaling factor, DESeq values are calculated as the total of rescaled gene counts of all runs.</li>
+<li><strong>Trimmed Mean of M-values (TMM)</strong>: This normalization method is implemented in the edgeR Bioconductor package (Robinson et al., 2010). It is also based on the hypothesis that most genes are not DE. Scaling factors are calculated using the calcNormFactors function in the package, and then rescaled gene counts are obtained by dividing gene counts by each scaling factor for each run. TMM is the sum of rescaled gene counts of all runs.</li>
+<li><strong>Quantile (Q)</strong>: First proposed in the context of microarray data, this normalization method consists in matching distributions of gene counts across lanes.</li>
+<li>**Reads Per Kilobase per Million mapped reads (RPKM): This approach was initially introduced to facilitate comparisons between genes within a sample and combines between- and within-sample normalization. This approach quantifies gene expression from RNA-Seq data by normalizing for the total transcript length and the number of sequencing reads.
+See comparison of various normalization techniques <a href="http://www.rna-seqblog.com/which-method-should-you-use-for-normalization-of-rna-seq-data/">here</a>.</li>
+</ul>
+
+<h3 id="3-6-software-for-rna-seq-deg-analysis">3.6 Software for RNA-Seq DEG Analysis</h3>
+
+<ul>
+<li>edgeR (Robinson et al., 2010)</li>
+<li>DESeq/DESeq2 (Anders and Huber, 2010, 2014)</li>
+<li>DEXSeq (Anders et al., 2012)</li>
+<li>limmaVoom</li>
+<li>Cuffdiff/Cuffdiff2 (Trapnell et al., 2013)</li>
+<li>PoissonSeq</li>
+<li>baySeq</li>
+</ul>
+
+<h2 id="4-rna-seq-analysis">4 RNA-Seq Analysis</h2>
+
+<h3 id="4-1-data-sets-and-experimental-variables">4.1 Data Sets and Experimental Variables</h3>
+
+<p>The mini sample FASTQ files used in this overview vignette and the associated workflow reporting vignettes can be loaded via the <code>systemPipeRdata</code> package as shown below. The chosen data set <a href="http://www.ncbi.nlm.nih.gov/sra/?term=SRP010938">SRP010938</a> contains 18 paired-end (PE) read sets from Arabidposis thaliana (Howard et al., 2013). To minimize processing time during testing, each FASTQ file has been subsetted to 90,000-100,000 randomly sampled PE reads that map to the first 100,000 nucleotides of each chromosome of the A. thaliana genome. The corresponding reference genome sequence (FASTA) and its GFF annotation files (provided in the same download) have been truncated accordingly. This way the entire test sample data set requires less than 200MB disk storage space.</p>
+
+<p>In this RNA-Seq demo, we are using a Bioconductor package,<code>systemPipeR</code>, a R utility for building end-to-end analysis pipelines with automated report generation for next generation sequence (NGS) applications such as RNA-Seq, ChIP-Seq, VAR-Seq and Ribo-Seq (Girke T, 2015) <a href="http://bioconductor.org/packages/release/bioc/html/systemPipeR.html">Link</a>.</p>
+
+<p>Start the analysis by opening in your R session the <code>RNAseq.R</code> script which contains the code shown in this vignette in pure text format. The following generates a fully populated <code>systemPipeR</code> workflow environment (here for RNA-Seq) in the current working directory of an R session:</p>
+
+<pre><code>library(systemPipeRdata)
+genWorkenvir(workflow=&quot;rnaseq&quot;)
+setwd(&quot;rnaseq&quot;)
+</code></pre>
+
+<p>The working environment of the sample data as loaded above contains the following pre-configured directory structure:</p>
+
+<ul>
+<li>workflow/ (e.g. rnaseq/)
+
+<ul>
+<li>This is the directory of the R session running the workflow.</li>
+<li>Run script ( *.Rnw or *.Rmd) and sample annotation (targets.txt) files are located here.</li>
+<li>Note, this directory can have any name (e.g. rnaseq, varseq). Changing its name does not require any modifications in the run script(s).</li>
+<li>Important subdirectories:</li>
+<li>param/
+
+<ul>
+<li>Stores parameter files such as: *.param, *.tmpl and *_run.sh.</li>
+</ul></li>
+<li>data/
+
+<ul>
+<li>FASTQ samples</li>
+<li>Reference FASTA file</li>
+<li>Annotations</li>
+<li>etc.</li>
+</ul></li>
+<li>results/
+
+<ul>
+<li>Alignment, variant and peak files (BAM, VCF, BED)</li>
+<li>Tabular result files</li>
+<li>Images and plots</li>
+<li>etc.
+The following parameter files are included in each workflow template:</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<ol>
+<li>targets.txt: initial one provided by user; downstream targets_*.txt files are generated automatically</li>
+<li>*.param: defines parameter for input/output file operations, e.g. trim.param, bwa.param, vartools.param, …</li>
+<li>*_run.sh: optional bash script, e.g.: gatk_run.sh</li>
+<li>Compute cluster environment (skip on single machine):
+
+<ul>
+<li>.BatchJobs: defines type of scheduler for BatchJobs</li>
+<li>*.tmpl: specifies parameters of scheduler used by a system, e.g. Torque, SGE, StarCluster, Slurm, etc.
+<br /></li>
+</ul></li>
+</ol>
+
+<p>The sample workflows provided by this vignette are based on the above directory structure, where directory names are indicated in <font color=gray>grey</font>. Users can change this structure as needed, but need to adjust the code in their workflows accordingly.</p>
+
+<h4 id="4-1-1-structure-of-targets-file">4.1.1 Structure of targets file</h4>
+
+<p>The FASTQ files are organized in the provided targets.txt file. This is the only file in this analysis workflow that needs to be generated manually, e.g. in a spreadsheet program. To import targets.txt, we run the following commands from R. The targets file defines all input files (e.g. FASTQ, BAM, BCF) and sample comparisons of an analysis workflow. The following shows the format of a sample targets file provided by this package. In a target file with a single type of input files, here FASTQ files of single end (SE) reads, the first three columns are mandatory including their column names, while it is four mandatory columns for FASTQ files for PE reads. All subsequent columns are optional and any number of additional columns can be added as needed.</p>
+
+<p>#####4.1.1.1 Structure of targets file for single end (SE) samples</p>
+
+<pre><code>library(systemPipeR)
+targetspath &lt;- system.file(&quot;extdata&quot;, &quot;targets.txt&quot;, package=&quot;systemPipeR&quot;) 
+read.delim(targetspath, comment.char = &quot;#&quot;)
+</code></pre>
+
+<pre><code>##                    FileName SampleName Factor SampleLong Experiment        Date
+## 1  ./data/SRR446027_1.fastq        M1A     M1  Mock.1h.A          1 23-Mar-2012
+## 2  ./data/SRR446028_1.fastq        M1B     M1  Mock.1h.B          1 23-Mar-2012
+## 3  ./data/SRR446029_1.fastq        A1A     A1   Avr.1h.A          1 23-Mar-2012
+## 4  ./data/SRR446030_1.fastq        A1B     A1   Avr.1h.B          1 23-Mar-2012
+## 5  ./data/SRR446031_1.fastq        V1A     V1   Vir.1h.A          1 23-Mar-2012
+## 6  ./data/SRR446032_1.fastq        V1B     V1   Vir.1h.B          1 23-Mar-2012
+## 7  ./data/SRR446033_1.fastq        M6A     M6  Mock.6h.A          1 23-Mar-2012
+## 8  ./data/SRR446034_1.fastq        M6B     M6  Mock.6h.B          1 23-Mar-2012
+## 9  ./data/SRR446035_1.fastq        A6A     A6   Avr.6h.A          1 23-Mar-2012
+## 10 ./data/SRR446036_1.fastq        A6B     A6   Avr.6h.B          1 23-Mar-2012
+## 11 ./data/SRR446037_1.fastq        V6A     V6   Vir.6h.A          1 23-Mar-2012
+## 12 ./data/SRR446038_1.fastq        V6B     V6   Vir.6h.B          1 23-Mar-2012
+## 13 ./data/SRR446039_1.fastq       M12A    M12 Mock.12h.A          1 23-Mar-2012
+## 14 ./data/SRR446040_1.fastq       M12B    M12 Mock.12h.B          1 23-Mar-2012
+## 15 ./data/SRR446041_1.fastq       A12A    A12  Avr.12h.A          1 23-Mar-2012
+## 16 ./data/SRR446042_1.fastq       A12B    A12  Avr.12h.B          1 23-Mar-2012
+## 17 ./data/SRR446043_1.fastq       V12A    V12  Vir.12h.A          1 23-Mar-2012
+## 18 ./data/SRR446044_1.fastq       V12B    V12  Vir.12h.B          1 23-Mar-2012
+</code></pre>
+
+<p>To work with the custom data, users need to generate a <code>targets</code> file containing the paths to their own FASTQ files and then provide under <code>targetspath</code> the path to the corresponding <code>targets</code> file.</p>
+
+<h4 id="4-1-1-2-structure-of-targets-file-for-paired-end-pe-samples">4.1.1.2 Structure of targets file for paired end (PE) samples</h4>
+
+<pre><code>targetspath &lt;- system.file(&quot;extdata&quot;, &quot;targetsPE.txt&quot;, package=&quot;systemPipeR&quot;)
+read.delim(targetspath, comment.char = &quot;#&quot;)[1:2,1:6]
+</code></pre>
+
+<pre><code>##                  FileName1                FileName2 SampleName Factor SampleLong Experiment
+## 1 ./data/SRR446027_1.fastq ./data/SRR446027_2.fastq        M1A     M1  Mock.1h.A          1
+## 2 ./data/SRR446028_1.fastq ./data/SRR446028_2.fastq        M1B     M1  Mock.1h.B          1
+</code></pre>
+
+<h4 id="4-1-1-3-sample-comparisons">4.1.1.3 Sample comparisons</h4>
+
+<p>Sample comparisons are defined in the header lines of the targets file starting with ‘# <CMP>’.</p>
+
+<pre><code>readLines(targetspath)[1:4]
+</code></pre>
+
+<pre><code>## [1] &quot;# Project ID: Arabidopsis - Pseudomonas alternative splicing study (SRA: SRP010938; PMID: 24098335)&quot;                                                                              
+## [2] &quot;# The following line(s) allow to specify the contrasts needed for comparative analyses, such as DEG identification. All possible comparisons can be specified with 'CMPset: ALL'.&quot;
+## [3] &quot;# &lt;CMP&gt; CMPset1: M1-A1, M1-V1, A1-V1, M6-A6, M6-V6, A6-V6, M12-A12, M12-V12, A12-V12&quot;                                                                                             
+## [4] &quot;# &lt;CMP&gt; CMPset2: ALL&quot;
+</code></pre>
+
+<p>The function <code>readComp</code> imports the comparison and stores them in a <code>list</code>. Alternatively, <code>readComp</code> can obtain the comparison information from the corresponding <code>SYSargs</code> object (see below). Note, the header lines are optional. They are mainly useful for controlling comparative analysis according to certain biological expectations, such as simple pairwise comparisons in RNA-Seq experiments.</p>
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/rnaseq/" rel="tag">RNAseq</a></li>
+	</ul>
+</div>
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="shuixingzhou avatar" src="/img/wei.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About shuixingzhou</span>
+	</div>
+	<div class="authorbox__description">
+		伪装程序猿，工作中用到R，Python和MySQL等，因此自学----尚未成才。美梦来当马，诗酒趁年华!
+	</div>
+</div>
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/pip-installation-problems/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">pip安装路上的各种坑</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next col-1-2">
+		<a class="post-nav__link" href="/post/steps-to-python-decorators/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">深入学习python装饰器</p></a>
+	</div>
+</nav>
+
+	
+</main>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">近期文章</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/steps-to-python-decorators/">深入学习python装饰器</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/">NGS sequence analysis with R / Bioconductor: RNA-Seq workflow</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/pip-installation-problems/">pip安装路上的各种坑</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/windows-git-ssh/">Windows下生成git ssh公钥</a></li>
+			<li class="widget__item"><a class="widget__link" href="/life/despairing-perseverance/">毅力，为何如此绝望</a></li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">文章分类</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/git">Git</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/hugo">Hugo</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/mysql">Mysql</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/netlify">Netlify</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/rnaseq">Rnaseq</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/website">Website</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e7%94%9f%e6%b4%bb">生活</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e8%af%97%e8%af%8d">诗词</a></li>
+		</ul>
+	</div>
+</div>
+	
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">联系</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/shuixingzhou" target="_blank">
+				<svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:2903669089@qq.com">
+				<svg class="widget-social__link-icon icon-mail" viewBox="0 0 416 288" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>2903669089@qq.com</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+	
+<div class="widget-taglist widget">
+	<h4 class="widget__title">标签</h4>
+	<div class="widget__content">
+		<a class="widget__link widget__link--taglist" href="/tags/git" title="git">git</a>
+		<a class="widget__link widget__link--taglist" href="/tags/hugo" title="hugo">hugo</a>
+		<a class="widget__link widget__link--taglist" href="/tags/linux" title="linux">linux</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mysql" title="mysql">mysql</a>
+		<a class="widget__link widget__link--taglist" href="/tags/python" title="python">python</a>
+		<a class="widget__link widget__link--taglist" href="/tags/r" title="r">r</a>
+		<a class="widget__link widget__link--taglist" href="/tags/rblogdown" title="rblogdown">rblogdown</a>
+		<a class="widget__link widget__link--taglist" href="/tags/rnaseq" title="rnaseq">rnaseq</a>
+		<a class="widget__link widget__link--taglist" href="/tags/ubuntu" title="ubuntu">ubuntu</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e7%94%9f%e6%b4%bb" title="生活">生活</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e8%af%97%e8%af%8d" title="诗词">诗词</a>
+	</div>
+</div>
+</aside>
+
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2019 水行舟. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Website on 水行舟</title>
+    <link>https://shuixingzhou.github.io/categories/website/</link>
+    <description>Recent content in Website on 水行舟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-hans</language>
+    <lastBuildDate>Tue, 03 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://shuixingzhou.github.io/categories/website/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>万网域名解析记录</title>
+      <link>https://shuixingzhou.github.io/post/domain-name-resolution/</link>
+      <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/domain-name-resolution/</guid>
+      <description>&lt;p&gt;采用的阿里云旗下万网域名。域名解析直接进入阿里云控制台选择域名点击&lt;code&gt;解析&lt;/code&gt;即可。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

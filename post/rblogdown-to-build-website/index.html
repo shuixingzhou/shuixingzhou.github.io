@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>利用Rblogdown建立个人博客网站</title>
+<meta name="description" content="personal website to trace my progress">
+<meta name="generator" content="Hugo 0.54.0" />
+<meta property="og:title" content="利用Rblogdown建立个人博客网站" />
+<meta property="og:description" content="一直都有建一个个人网站的打算，为此我还申请了域名、购买了主机。但是一直都没有找到合适的建站模板。此前尝试过织梦、Wordpress和django等，但都有各自的不理想之处。遇上Rblogdown后算是一见倾心。今天终于完成了Rblogdown建个人网站的项目，现在讲建站过程以及遇到的问题记录下来以便日后查询。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shuixingzhou.github.io/post/rblogdown-to-build-website/" />
+<meta property="article:published_time" content="2018-03-24T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-03-24T00:00:00&#43;00:00"/>
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="/js/scripts.js"></script>
+<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="水行舟" rel="home">
+						<h1 class="logo__title">水行舟</h1>
+						<h2 class="logo__tagline">Stay yong, stay foolish</h2>
+					</a>
+				</div>
+			</div>
+			
+<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="menu__list">
+		<li class="menu__item"><a class="menu__link" href="/">HOME</a></li>
+		<li class="menu__item"><a class="menu__link" href="/about/">关于我</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/">技术文章</a></li>
+		<li class="menu__item"><a class="menu__link" href="/life/">生活与诗</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper clearfix">
+
+<main class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		<header class="post__header clearfix">
+			<h1 class="post__title">利用Rblogdown建立个人博客网站</h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2018-03-24T00:00:00">2018-03-24</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/hugo" rel="category">HUGO</a></span>
+			</p>
+		</header>
+		<div class="post__content clearfix">
+			<p>一直都有建一个个人网站的打算，为此我还申请了域名、购买了主机。但是一直都没有找到合适的建站模板。此前尝试过织梦、Wordpress和django等，但都有各自的不理想之处。遇上<code>Rblogdown</code>后算是一见倾心。今天终于完成了<code>Rblogdown</code>建个人网站的项目，现在讲建站过程以及遇到的问题记录下来以便日后查询。</p>
+
+<!--more-->
+
+<h2 id="1-软件准备">1.软件准备</h2>
+
+<p><code>Rblogdown</code>是基于<a href="http://gohugo.io/">HUGO</a>技术的一个R扩展包，是<a href="https://yihui.name">谢益辉</a> 大神为大家准备的又一个神兵利器。想要通过<code>Rblogdown</code>来建立自己的网站，首先要安装相关的程序。</p>
+
+<p><strong>R与R IDE</strong></p>
+
+<p>毫无疑问首先需要安装<a href="https://cran.r-project.org/">R语言</a>， 同时R语言IDE个人推荐使用<a href="https://www.rstudio.com/">RStudio</a>。然后需要安装我们的主角，<code>Rblodown</code>扩展包。采用<code>RStudio</code>和<code>Rblogdown</code>应该是一个捷径。</p>
+
+<p>我个人的平台以及相关安装包如下：</p>
+
+<pre><code class="language-r">sessionInfo()
+</code></pre>
+
+<p><strong>Hugo</strong>程序安装</p>
+
+<p>可以到<code>github</code>(<a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a>) 上下载与个人系统相对应的安装包。同时如果成功安装了<code>Rblogdown</code>扩展包也可以采用<code>blogdown::install_hugo()</code>来安装<code>Hugo</code>程序。</p>
+
+<p><strong>网站主题</strong></p>
+
+<p>个人多次失败的经验表明，虽好还是在建站之前选好主题。Hugo官网（<a href="https://themes.gohugo.io/）">https://themes.gohugo.io/）</a> 展示了许多不错的主题，简约、炫酷、低调、奢华应有尽有，可以根据个人喜好选择。选定之后可以直接下载下来，当然也可以在建站的同时指定这一个主题也是可以。如果指定主题，那么建站时自动会帮我们下载这个主题。我采用的主题是<a href="https://github.com/Vimux/Mainroad/">Mainroad</a>。</p>
+
+<h2 id="2-创建网站">2. 创建网站</h2>
+
+<p>当需要的各种软件准备好之后，就可以正是开始搭建自己的个人网站了。所有的操作均可以在<code>RStudio</code>中进行的。</p>
+
+<pre><code>blogdown::new_site(dir = &quot;.&quot;, theme = &quot;Vimux/Mainroad&quot;)
+</code></pre>
+
+<p>就这么简单，个人的博客网站就这么建成了。但是现在还只是别人的网站，因为所有的网站文件均是别人的。
+回到自己的工作目录，可以看到有以下目录和文件：</p>
+
+<pre><code>archetypes  
+config.toml #配置文件，修改网站名、作者名和个人简介等
+content     #存放新添加的文章
+data        
+index.Rmd   
+layouts     #网站布局文件
+public      #将content里的内容解析成html文件
+static      #存放css和js等文件
+themes      #主题
+</code></pre>
+
+<p>此时在<code>RStudio</code>中利用<code>server site()</code>命令可以预览创建的网站。可以在<code>RStudio</code>预览窗格预览，也可在以浏览器以本地主机地址预览<code>http://127.0.0.1</code>。 后一种方法需要注意分配的端口。</p>
+
+<h2 id="3-修改网站">3. 修改网站</h2>
+
+<p>要想让这个网站完全成为自己心目中所想的样子，还有一些工作要做。</p>
+
+<p><strong>导航栏目</strong></p>
+
+<p>导航栏目的更改是新手要面临的最基本也是最重要的难题之一。我在这个问题上被困了好久。依据主题建立的网站是这样的<a href="https://hugothemes.gitlab.io/mainroad/。">https://hugothemes.gitlab.io/mainroad/。</a> 想要自己设置不同于模板的栏目，首先要在content目录下，新建想要作为主要导航栏目的文件夹。重点来了，新建文件夹之后还需要在每一个新建的文件夹下新建一个文件&ndash;<code>_index.md</code>，否则将会出错。有些主题模板还需要在<code>config.toml</code>文件中进行导航栏目设置，或者在<code>layouts</code>文件夹下<code>partial/menu.html</code>中进行设置，而我采用的<code>Mainroad</code>模板根据<code>content</code>目录里的内容自动生成。</p>
+
+<p><strong>格式或者样式调整</strong></p>
+
+<p>采用的模板之前是灰色主基调加上暗红色的条线等，可以在主题模板文件夹下的<code>css</code>目录下的<code>css</code>文件中依据自己的爱好进行调整。</p>
+
+<h2 id="4-网站发布">4. 网站发布</h2>
+
+<p>如果没有自己的域名和主机，网站可以利用github的pages服务免费发布在GitHub网站上。具体操作如下：首先在<strong>github</strong>新建一个 <strong>以自己用户名为名字的仓库（repository）</strong>。在发布之前需要在配置文件<code>config.toml</code>中将<code>baseurl</code>修改为你的github的pages服务如<code>https://&lt;yourname&gt;.github.io/</code>。 然后进入public文件夹，利用git命令将建站文件提交即可。</p>
+
+<pre><code>cd public
+git init 
+git add -A
+git commit -m &quot;first commit&quot;
+git remote add origin https://github.com/&lt;github帐号&gt;/&lt;仓库名称&gt; #如果托管在GitHub的pages服务上，仓库名称需要和用户名称相同。
+git remote -v #
+git pull origin master --allow-unrelated-histories
+git push -u origin master
+</code></pre>
+
+<p>现在终于大功告成了。在浏览器输入自己的主页网址，即<code>https://*yourname*.github.io/</code>，就可以欣赏自己的成果啦！</p>
+
+<h2 id="5-可能会遇见的问题">5. 可能会遇见的问题</h2>
+
+<p>在个人建站中主要遇到了以下问题：</p>
+
+<ul>
+<li>导航栏目设置的问题：自己的网站当然要按照自己的想法来设置咯，但是导航栏目总是出错。翻阅了许多资料，终于发现不只是在<code>content</code>下新建一个文件夹那么简单，至少还需要在新建的文件夹中添加一个&rsquo;_index.md&rsquo;文件，可以什么都不用写，但是必须要有。</li>
+
+<li><p>网站发布问题：在GitHub上新建了多个仓库，但是总是失败。后知后觉才发现仓库的名字必须要和自己的用户名相同（这是神马鬼规定啊，菜鸟如我完全不懂为什么&hellip;）。</p></li>
+
+<li><p><code>readmore</code>/<code>阅读全文</code>标签的问题：我想要在网站首页显示最新的文章摘要。测试时发现没有问题，可以当要发布文章时发现无法形成<code>readmore</code>标签。解决方法是在<code>markdown</code>文件里摘要后边添加<code>&lt;!--more--&gt;</code>。此外，如果使用<code>Rblogdown</code>，会有三种<code>markdown</code>格式，<code>.md</code>、<code>.Rmd</code>和<code>.R markdown</code>。 不同的格式之间也存在着差别。具体请看<a href="https://bookdown.org/yihui/blogdown/">谢益辉大神</a>的介绍。</p></li>
+
+<li><p>添加博文的问题：由于<code>hugo</code>建立的是静态网站，因此没有自己的后台。网站搭建完成之后想要添加新的博文怎么办呢？首先用<code>blogdown:::new_post()</code>或者在RStudio中插件(Addins)里选择&rsquo;New Post&rsquo;添加新的<code>md</code>等格式文件。 新添加的文件会自动保存在<code>content</code>文件夹下。此时就需要从新用到<code>blogdown:::serve_site()</code>了。然后进入public文件夹，利用<code>git</code>将修改后的网站文件重新发布到<code>github</code>仓库里去，使用下边三条命令即可：</p></li>
+</ul>
+
+<pre><code>  git add -A
+  git commit -m &quot;another commit&quot;
+  git push -u origin master
+</code></pre>
+
+<ul>
+<li><code>Server Site</code>没有反应的问题：总数莫名其妙的出现无法生成网站文件的问题，比如智能<code>rendering</code><code>Rmd</code>文件的问题，目前还不知道到底是把哪里不小心给更改了。删除昨晚新建的一篇文章之后，<code>Server Site</code>又恢复了正常。原因可能在于对<code>toml</code>和<code>yaml</code>等语言不够熟悉，出现了错误的设置。</li>
+</ul>
+
+<p>总之，个人网站算是搭建完成了，还有一些元素需要调整，但是根基和结构已经搞定。需要注意的是，如同建房子，搭建起来虽然容易，是想要住的舒心，还需要付出更多的心血。</p>
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/hugo/" rel="tag">HUGO</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/rblogdown/" rel="tag">Rblogdown</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/r/" rel="tag">R</a></li>
+	</ul>
+</div>
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="shuixingzhou avatar" src="/img/wei.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About shuixingzhou</span>
+	</div>
+	<div class="authorbox__description">
+		伪装程序猿，工作中用到R，Python和MySQL等，因此自学----尚未成才。美梦来当马，诗酒趁年华!
+	</div>
+</div>
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--next col-1-2">
+		<a class="post-nav__link" href="/post/hugo-template-primer/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Hugo Template Primer</p></a>
+	</div>
+</nav>
+
+	
+</main>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">近期文章</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/steps-to-python-decorators/">深入学习python装饰器</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/">NGS sequence analysis with R / Bioconductor: RNA-Seq workflow</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/pip-installation-problems/">pip安装路上的各种坑</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/windows-git-ssh/">Windows下生成git ssh公钥</a></li>
+			<li class="widget__item"><a class="widget__link" href="/life/despairing-perseverance/">毅力，为何如此绝望</a></li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">文章分类</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/git">Git</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/hugo">Hugo</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/mysql">Mysql</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/netlify">Netlify</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/rnaseq">Rnaseq</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/website">Website</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e7%94%9f%e6%b4%bb">生活</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e8%af%97%e8%af%8d">诗词</a></li>
+		</ul>
+	</div>
+</div>
+	
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">联系</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/shuixingzhou" target="_blank">
+				<svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:2903669089@qq.com">
+				<svg class="widget-social__link-icon icon-mail" viewBox="0 0 416 288" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>2903669089@qq.com</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+	
+<div class="widget-taglist widget">
+	<h4 class="widget__title">标签</h4>
+	<div class="widget__content">
+		<a class="widget__link widget__link--taglist" href="/tags/git" title="git">git</a>
+		<a class="widget__link widget__link--taglist" href="/tags/hugo" title="hugo">hugo</a>
+		<a class="widget__link widget__link--taglist" href="/tags/linux" title="linux">linux</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mysql" title="mysql">mysql</a>
+		<a class="widget__link widget__link--taglist" href="/tags/python" title="python">python</a>
+		<a class="widget__link widget__link--taglist" href="/tags/r" title="r">r</a>
+		<a class="widget__link widget__link--taglist" href="/tags/rblogdown" title="rblogdown">rblogdown</a>
+		<a class="widget__link widget__link--taglist" href="/tags/rnaseq" title="rnaseq">rnaseq</a>
+		<a class="widget__link widget__link--taglist" href="/tags/ubuntu" title="ubuntu">ubuntu</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e7%94%9f%e6%b4%bb" title="生活">生活</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e8%af%97%e8%af%8d" title="诗词">诗词</a>
+	</div>
+</div>
+</aside>
+
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2019 水行舟. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+</body>
+</html>

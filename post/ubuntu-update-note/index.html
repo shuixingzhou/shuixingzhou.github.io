@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubuntu 18.04LTS更新日记</title>
+<meta name="description" content="personal website to trace my progress">
+<meta name="generator" content="Hugo 0.54.0" />
+<meta property="og:title" content="Ubuntu 18.04LTS更新日记" />
+<meta property="og:description" content="两年前因为好奇装上了Ubuntu16.04LTS，之后一发不可收拾，从此走上了不折腾不舒服斯基的道路。参考网上资料、购买书籍或者自己瞎几把捣鼓，加固态硬盘，扩充内存条，装双系统等，在自己条件可及的情况下把这台老当益壮的惠普折腾的够呛，而自己也在Linux这个坑里越陷越深。
+4月26号发布了期待已久的的Ubuntu18.04LTS，第一时间也上手尝试了一下。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shuixingzhou.github.io/post/ubuntu-update-note/" />
+<meta property="article:published_time" content="2018-05-05T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-05-05T00:00:00&#43;00:00"/>
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="/js/scripts.js"></script>
+<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="水行舟" rel="home">
+						<h1 class="logo__title">水行舟</h1>
+						<h2 class="logo__tagline">Stay yong, stay foolish</h2>
+					</a>
+				</div>
+			</div>
+			
+<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="menu__list">
+		<li class="menu__item"><a class="menu__link" href="/">HOME</a></li>
+		<li class="menu__item"><a class="menu__link" href="/about/">关于我</a></li>
+		<li class="menu__item"><a class="menu__link" href="/post/">技术文章</a></li>
+		<li class="menu__item"><a class="menu__link" href="/life/">生活与诗</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper clearfix">
+
+<main class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		<header class="post__header clearfix">
+			<h1 class="post__title">Ubuntu 18.04LTS更新日记</h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2018-05-05T00:00:00">2018-05-05</time>
+			</p>
+		</header>
+		<div class="post__content clearfix">
+			<p>两年前因为好奇装上了<b>Ubuntu16.04LTS</b>，之后一发不可收拾，从此走上了不折腾不舒服斯基的道路。参考网上资料、购买书籍或者自己瞎几把捣鼓，加固态硬盘，扩充内存条，装双系统等，在自己条件可及的情况下把这台老当益壮的惠普折腾的够呛，而自己也在<code>Linux</code>这个坑里越陷越深。
+4月26号发布了期待已久的的<b>Ubuntu18.04LTS</b>，第一时间也上手尝试了一下。</p>
+
+<h2 id="1-关于ubuntu18-04lts">1. 关于Ubuntu18.04LTS</h2>
+
+<p>Ubuntu18.04LTS是Ubuntu最新的长期支持版本，对桌面版和服务器版有长达5年的支持。Ubuntu18.04被Canonical的创始人Mark Shuttleworth命名为<code>Bionic Beaver（仿生海狸）</code>。</p>
+
+<h2 id="2-ubuntu18-04lts安装">2. Ubuntu18.04LTS安装</h2>
+
+<p>由于之前安装的是Ubuntu16.04，而从Ubuntu16.04直接升级到Ubuntu18.04的版本7月份才发布。因此只能采用重新安装的方法。本次我采用制作U盘启动盘的方法直接安装Ubuntu。</p>
+
+<h3 id="1-iso映像文件下载">（1）ISO映像文件下载</h3>
+
+<p>由于本次Ubuntu18.04只提供<code>amdx64</code>架构，因此直接在<a href="http://cdimage.ubuntu.com/daily-live/current/">Ubuntu官网</a>下载了这个版本。</p>
+
+<h3 id="2-启动盘制作">（2）启动盘制作</h3>
+
+<p>采用官网推荐的启动盘制作程序<a href="http://rufus.akeo.ie/"><code>rufus</code></a>。<code>rufus</code>操作简单，使用方便。</p>
+
+<h3 id="3-直接安装">（3）直接安装</h3>
+
+<p>插入制作成功的启动U盘后，首先进入BIOS系统设置U盘启动，然后重新启动，自动进入系统安装界面。如果对分区没有要求，直接选择下一步即可。同时，在本次发布的版本中新加了<code>Minimal installation</code>，相较于<code>Normal installation</code>，<code>Minimal installation</code>仅包括核心功能，即Ubuntu桌面环境以及浏览器和必备标准组件，如 GNOME apps like Terminal, System Monitor, Calculator, Gedit, Evince, and Videos (Totem)。</p>
+
+<p>本次采用<code>Normal installation</code>。同时对分区做了调整。分区如下：</p>
+
+<pre><code>/: 30G
+/boot: 600M
+/swap: 2048M
+/home: 剩余所有的空间
+</code></pre>
+
+<h2 id="3-新体验">3. 新体验</h2>
+
+<p>相比于之前的16.04，本版本更加清爽。最大的区别之一是，取消了<code>DASH</code>框。桌面环境采用的是GNOME desktop 3.28，内核采用的是linux kernel 4.15。相比之前版本，使用起来并不会造成什么障碍。</p>
+
+<h2 id="4-必备软件安装">4. 必备软件安装</h2>
+
+<p>初略体验了一把之后，要想让该系统能够正常工作，还需要添加必备的软件。</p>
+
+<p><strong>中文输入法</strong><br>
+简单操作采用英文可以，然而日常办公还是需要中文输入法的。在Ubuntu16.04，采用搜狗输入法，上手与Windows环境没差。在本次版本中目前还不支持搜狗输入法，但是完全可以采用其他的方法。
+设置的方法是：Settings &mdash;&gt; Region &amp; Language &mdash;&gt; Input Source: Chinese (Intelligent Pinyin)。</p>
+
+<p><strong>Vim文本编辑器</strong><br>
+很奇怪本次发布的新版本中竟然没有默认安装<code>Vim</code>文本编辑器。<code>Vim</code>文本编辑器是功能最强大、使用最普遍的编辑器之一，因此在发现没有自带后毫不犹豫的安装了<code>Vim</code>编辑器。可以直接采用<code>sudo apt install vim</code>进行安装。</p>
+
+<p><strong>R语言和Rstudio</strong><br>
+作为必备了统计分析软件R语言，在之前的版本中是默认安装的。但是在新的版本需要自己手动安装。在本次安装中<code>R</code>和<code>RStudio</code>均是下载<code>deb</code>包手动安装。</p>
+
+<p><strong>Pycharm</strong><br>
+新的版本中默认安装了Python2.0和Python3.0，都是最新版本。Python的IDE，相比还是Pycharm功能最为全面，使用操作也更加人性化。只是Pycharm安装需要下载<code>deb</code>包进行安装。</p>
+
+<p><strong>WPS</strong><br>
+Ubuntu中自带的办公软件是<code>LibreOffice</code>系列，相比该办公套件<code>WPS</code>系列办公软件更加适合从<code>Windows</code>迁移过来的用户。</p>
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/linux/" rel="tag">Linux</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/ubuntu/" rel="tag">Ubuntu</a></li>
+	</ul>
+</div>
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="shuixingzhou avatar" src="/img/wei.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About shuixingzhou</span>
+	</div>
+	<div class="authorbox__description">
+		伪装程序猿，工作中用到R，Python和MySQL等，因此自学----尚未成才。美梦来当马，诗酒趁年华!
+	</div>
+</div>
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/mysql-stored-procedure-and-function/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">MySQL存储过程和函数</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next col-1-2">
+		<a class="post-nav__link" href="/post/windows-git-ssh/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Windows下生成git ssh公钥</p></a>
+	</div>
+</nav>
+
+	
+</main>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">近期文章</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/steps-to-python-decorators/">深入学习python装饰器</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/">NGS sequence analysis with R / Bioconductor: RNA-Seq workflow</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/pip-installation-problems/">pip安装路上的各种坑</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/windows-git-ssh/">Windows下生成git ssh公钥</a></li>
+			<li class="widget__item"><a class="widget__link" href="/life/despairing-perseverance/">毅力，为何如此绝望</a></li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">文章分类</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/git">Git</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/hugo">Hugo</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/mysql">Mysql</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/netlify">Netlify</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/rnaseq">Rnaseq</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/website">Website</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e7%94%9f%e6%b4%bb">生活</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e8%af%97%e8%af%8d">诗词</a></li>
+		</ul>
+	</div>
+</div>
+	
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">联系</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/shuixingzhou" target="_blank">
+				<svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:2903669089@qq.com">
+				<svg class="widget-social__link-icon icon-mail" viewBox="0 0 416 288" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>2903669089@qq.com</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+	
+<div class="widget-taglist widget">
+	<h4 class="widget__title">标签</h4>
+	<div class="widget__content">
+		<a class="widget__link widget__link--taglist" href="/tags/git" title="git">git</a>
+		<a class="widget__link widget__link--taglist" href="/tags/hugo" title="hugo">hugo</a>
+		<a class="widget__link widget__link--taglist" href="/tags/linux" title="linux">linux</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mysql" title="mysql">mysql</a>
+		<a class="widget__link widget__link--taglist" href="/tags/python" title="python">python</a>
+		<a class="widget__link widget__link--taglist" href="/tags/r" title="r">r</a>
+		<a class="widget__link widget__link--taglist" href="/tags/rblogdown" title="rblogdown">rblogdown</a>
+		<a class="widget__link widget__link--taglist" href="/tags/rnaseq" title="rnaseq">rnaseq</a>
+		<a class="widget__link widget__link--taglist" href="/tags/ubuntu" title="ubuntu">ubuntu</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e7%94%9f%e6%b4%bb" title="生活">生活</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e8%af%97%e8%af%8d" title="诗词">诗词</a>
+	</div>
+</div>
+</aside>
+
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2019 水行舟. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+</body>
+</html>

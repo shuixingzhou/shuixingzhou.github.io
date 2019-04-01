@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on 水行舟</title>
+    <link>https://shuixingzhou.github.io/categories/python/</link>
+    <description>Recent content in Python on 水行舟</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-hans</language>
+    <lastBuildDate>Wed, 20 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://shuixingzhou.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>深入学习python装饰器</title>
+      <link>https://shuixingzhou.github.io/post/steps-to-python-decorators/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/steps-to-python-decorators/</guid>
+      <description>&lt;p&gt;如果拜读过大牛的代码，会发现他们有用到热衷炫酷的装饰器。可是当去查看装饰器的定义时，各种定义和解释常常让人一头雾水。本教程逐步深入装饰器的原理，从最简单的函数开始，到多层装饰器，一步一步拨云见日，让人豁然开朗。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>pip安装路上的各种坑</title>
+      <link>https://shuixingzhou.github.io/post/pip-installation-problems/</link>
+      <pubDate>Thu, 14 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shuixingzhou.github.io/post/pip-installation-problems/</guid>
+      <description>&lt;p&gt;最近使用&lt;code&gt;pip&lt;/code&gt;安装python扩展包的时候，又遇到了许多问题，现在一一记录下来，以备日后查询。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

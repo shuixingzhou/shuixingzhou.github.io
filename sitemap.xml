@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/steps-to-python-decorators/</loc>
+    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/</loc>
+    <lastmod>2018-07-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/pip-installation-problems/</loc>
+    <lastmod>2018-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/windows-git-ssh/</loc>
+    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/life/despairing-perseverance/</loc>
+    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/ubuntu-update-note/</loc>
+    <lastmod>2018-05-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/life/emotions-in-chaos/</loc>
+    <lastmod>2018-05-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/life/depression-on-spring/</loc>
+    <lastmod>2018-04-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/about/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/life/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/mysql-stored-procedure-and-function/</loc>
+    <lastmod>2018-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/domain-name-resolution/</loc>
+    <lastmod>2018-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/cname-setting/</loc>
+    <lastmod>2018-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/test-on-git-addins-in-rstudio/</loc>
+    <lastmod>2018-03-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/2018-03-27-git-local-remote/</loc>
+    <lastmod>2018-03-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/life/homesick-03-26/</loc>
+    <lastmod>2018-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/test-on-netlify/</loc>
+    <lastmod>2018-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/2018-03-24-hugoisforlovers/</loc>
+    <lastmod>2018-03-24T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/2018-03-24-migrate-from-jekyll/</loc>
+    <lastmod>2018-03-24T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/mysql-basic-syntax/</loc>
+    <lastmod>2018-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/life/missyou/</loc>
+    <lastmod>2018-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/2018-03-24-creating-a-new-theme/</loc>
+    <lastmod>2018-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/hugo-template-primer/</loc>
+    <lastmod>2018-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/life/poem-today-03-24/</loc>
+    <lastmod>2018-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/post/rblogdown-to-build-website/</loc>
+    <lastmod>2018-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/tags/git/</loc>
+    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/categories/git/</loc>
+    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/tags/hugo/</loc>
+    <lastmod>2018-03-24T21:13:14-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/categories/hugo/</loc>
+    <lastmod>2018-03-24T21:13:14-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/tags/linux/</loc>
+    <lastmod>2018-05-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/tags/mysql/</loc>
+    <lastmod>2018-04-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/categories/mysql/</loc>
+    <lastmod>2018-04-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/categories/netlify/</loc>
+    <lastmod>2018-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/tags/python/</loc>
+    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/categories/python/</loc>
+    <lastmod>2019-03-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/tags/r/</loc>
+    <lastmod>2018-03-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/tags/rblogdown/</loc>
+    <lastmod>2018-03-24T21:13:14-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/tags/rnaseq/</loc>
+    <lastmod>2018-07-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/categories/rnaseq/</loc>
+    <lastmod>2018-07-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/tags/</loc>
+    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/tags/ubuntu/</loc>
+    <lastmod>2018-05-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/categories/website/</loc>
+    <lastmod>2018-04-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/tags/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2018-05-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/tags/%E8%AF%97%E8%AF%8D/</loc>
+    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://shuixingzhou.github.io/categories/%E8%AF%97%E8%AF%8D/</loc>
+    <lastmod>2018-04-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
