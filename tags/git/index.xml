@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on 水行舟</title>
-    <link>/tags/git/</link>
+    <link>https://shuixingzhou.github.io/tags/git/</link>
     <description>Recent content in Git on 水行舟</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <lastBuildDate>Wed, 13 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shuixingzhou.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Windows下生成git ssh公钥</title>
-      <link>/post/windows-git-ssh/</link>
+      <link>https://shuixingzhou.github.io/post/windows-git-ssh/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/windows-git-ssh/</guid>
+      <guid>https://shuixingzhou.github.io/post/windows-git-ssh/</guid>
       <description>&lt;p&gt;Git是一款开源版本控制系统（Version Conrol System, VCS），由大神Linus用C写成。
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Test on git addins in Rstudio</title>
-      <link>/post/test-on-git-addins-in-rstudio/</link>
+      <link>https://shuixingzhou.github.io/post/test-on-git-addins-in-rstudio/</link>
       <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/test-on-git-addins-in-rstudio/</guid>
+      <guid>https://shuixingzhou.github.io/post/test-on-git-addins-in-rstudio/</guid>
       <description>Now i find a very interesting addins of Rstudio&amp;ndash;git. I used to use git as my version control tool. However never did i notice that Rstudio colected this funciton. It is really interesting!
 There are some methods in Rstudio to use git addins.
 TODO: finish this later!
@@ -35,10 +35,10 @@ later!</description>
     
     <item>
       <title>如何把本地项目上传到github上去？</title>
-      <link>/post/2018-03-27-git-local-remote/</link>
+      <link>https://shuixingzhou.github.io/post/2018-03-27-git-local-remote/</link>
       <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-03-27-git-local-remote/</guid>
+      <guid>https://shuixingzhou.github.io/post/2018-03-27-git-local-remote/</guid>
       <description>Git作为最知名的开源版本控制系统,常用于快捷高效地处理各类项目。
 一直纠结于如何快速的将本地项目推送到github远程服务器上去，今天收集了部分资料，记录如下。 1. 常用命令 git init
 首先进入项目根目录，初始化该项目，将项目加入git管理，该目录就是git的工作目录。运行该命令后会在根目录下新建一个.git的目录，用于保存所有的版本记录。

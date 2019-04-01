@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rnaseq on 水行舟</title>
-    <link>/tags/rnaseq/</link>
+    <link>https://shuixingzhou.github.io/tags/rnaseq/</link>
     <description>Recent content in Rnaseq on 水行舟</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <lastBuildDate>Sun, 08 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/rnaseq/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shuixingzhou.github.io/tags/rnaseq/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>NGS sequence analysis with R / Bioconductor: RNA-Seq workflow</title>
-      <link>/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/</link>
+      <link>https://shuixingzhou.github.io/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/</link>
       <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/</guid>
+      <guid>https://shuixingzhou.github.io/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/</guid>
       <description>&lt;p&gt;&lt;strong&gt;ATTENTION:&lt;/strong&gt; This post i found on the Internet, all rights reserved to the origin authors.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=&#34;http://biocluster.ucr.edu/~rkaundal/workshops/R_mar2016/RNAseq.html#integrated-development-environment-ide-for-r&#34;&gt;http://biocluster.ucr.edu/~rkaundal/workshops/R_mar2016/RNAseq.html#integrated-development-environment-ide-for-r&lt;/a&gt;&lt;/p&gt;

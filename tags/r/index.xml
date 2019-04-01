@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on 水行舟</title>
-    <link>/tags/r/</link>
+    <link>https://shuixingzhou.github.io/tags/r/</link>
     <description>Recent content in R on 水行舟</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <lastBuildDate>Tue, 27 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shuixingzhou.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Test on git addins in Rstudio</title>
-      <link>/post/test-on-git-addins-in-rstudio/</link>
+      <link>https://shuixingzhou.github.io/post/test-on-git-addins-in-rstudio/</link>
       <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/test-on-git-addins-in-rstudio/</guid>
+      <guid>https://shuixingzhou.github.io/post/test-on-git-addins-in-rstudio/</guid>
       <description>Now i find a very interesting addins of Rstudio&amp;ndash;git. I used to use git as my version control tool. However never did i notice that Rstudio colected this funciton. It is really interesting!
 There are some methods in Rstudio to use git addins.
 TODO: finish this later!
@@ -25,20 +25,20 @@ later!</description>
     
     <item>
       <title>Creating a New Theme</title>
-      <link>/post/2018-03-24-creating-a-new-theme/</link>
+      <link>https://shuixingzhou.github.io/post/2018-03-24-creating-a-new-theme/</link>
       <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-03-24-creating-a-new-theme/</guid>
+      <guid>https://shuixingzhou.github.io/post/2018-03-24-creating-a-new-theme/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
     
     <item>
       <title>利用Rblogdown建立个人博客网站</title>
-      <link>/post/rblogdown-to-build-website/</link>
+      <link>https://shuixingzhou.github.io/post/rblogdown-to-build-website/</link>
       <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/rblogdown-to-build-website/</guid>
+      <guid>https://shuixingzhou.github.io/post/rblogdown-to-build-website/</guid>
       <description>一直都有建一个个人网站的打算，为此我还申请了域名、购买了主机。但是一直都没有找到合适的建站模板。此前尝试过织梦、Wordpress和django等，但都有各自的不理想之处。遇上Rblogdown后算是一见倾心。今天终于完成了Rblogdown建个人网站的项目，现在讲建站过程以及遇到的问题记录下来以便日后查询。  1.软件准备 Rblogdown是基于HUGO技术的一个R扩展包，是谢益辉 大神为大家准备的又一个神兵利器。想要通过Rblogdown来建立自己的网站，首先要安装相关的程序。
 R与R IDE
 毫无疑问首先需要安装R语言， 同时R语言IDE个人推荐使用RStudio。然后需要安装我们的主角，Rblodown扩展包。采用RStudio和Rblogdown应该是一个捷径。

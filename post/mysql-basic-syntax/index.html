@@ -9,7 +9,7 @@
 <meta property="og:title" content="MySQL基础：常用命令整理" />
 <meta property="og:description" content="MySQL是甲骨文旗下的一款开源的也是目前最为流行的数据库管理系统（DBMS,Database management system）。MySQL是一种典型的关系型数据库系统（RDBMS，Relational Database Management System)。 create database dbname; # 创建数据库 show databases; # 显示当前连接下的所有数据库 use dbname; # 进入dbname数据库 create table tbname (id int, name char(20)) # 创建表tbname，该表有两个字段 show tables; # 显示当前数据库所有的表 desc tbname; # 显示tbname表的信息 describe tbname; # 显示tbname表的信息 show columns from tbname; # 显示tbname表的信息 show create table tbname; # 显示tbname表创建时的信息 insert into tbname (id, name) values (1, &#39;xiaoming&#39;); # 插入记录 select * from tbname; # 查询tbname表所有记录 select id,name from tbname where id=1; # 条件查询tbname表记录 delete from tbname; # 删除表中所有信息 drop table tbname; # 删除表 drop database dbname; # 删除数据库 update tbname set name=&#39;joe&#39; where id=1; # 更新数据 alter table tbname add score float(4) default &#39;0&#39;; # 添加字段 alter table tbname drop column column_name; # 删除字段 alter table tbname change score grade float(4); # 修改字段名 alter table tb_article modify column name varchar(20); # 修改字段类型 rename tbname to tbname_new; # 修改表名 select user(); # 显示当前用户 select database(); # 显示当前数据库名 select now()，current_date(); # 查询时间 show table status like &#39;tbname&#39;; # 显示表的状态 show version(); # 查看MySQL版本 source D:/test." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/mysql-basic-syntax/" />
+<meta property="og:url" content="https://shuixingzhou.github.io/post/mysql-basic-syntax/" />
 
 
 
@@ -132,7 +132,7 @@ source D:/test.sql;  # 导入sql数据库文件
 		<span class="authorbox__name">About shuixingzhou</span>
 	</div>
 	<div class="authorbox__description">
-		野生程序猿，爱好R、Python等，自学----尚未成才。有梦啥不怕，诗酒趁年华!
+		野生程序猿，爱好linux、R、Python等，自学许久，尚未成才。以梦为马，诗酒趁年华!
 	</div>
 </div>
 	

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mysql on 水行舟</title>
-    <link>/categories/mysql/</link>
+    <link>https://shuixingzhou.github.io/categories/mysql/</link>
     <description>Recent content in Mysql on 水行舟</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <lastBuildDate>Tue, 03 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shuixingzhou.github.io/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>MySQL存储过程和函数</title>
-      <link>/post/mysql-stored-procedure-and-function/</link>
+      <link>https://shuixingzhou.github.io/post/mysql-stored-procedure-and-function/</link>
       <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/mysql-stored-procedure-and-function/</guid>
-      <description>&lt;p&gt;存储过程（stored procedure）和函数（function）是事先经过编译并存储在数据库中的一段SQL语句的集合。
-&lt;/p&gt;</description>
+      <guid>https://shuixingzhou.github.io/post/mysql-stored-procedure-and-function/</guid>
+      <description>存储过程（stored procedure）和函数（function）是事先经过编译并存储在数据库中的一段SQL语句的集合。 1. 存储过程 创建过程 创建一个简单的存储过程，接受两个整型输入参数，计算二者之和，然后将其输出给一个整型参数。
+DROP PROCEDURE IF EXISTS `proc_add`; DELIMITER // CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_add`(IN a int, IN b int, OUT sum int) # DEFINER=`root`@`localhost` 创建者 BEGIN #Routine body goes here... DECLARE c int; if a is null then set a = 0; end if; if b is null then set b = 0; end if; set sum = a + b; END // DELIMITER ;  调用过程 mysql&amp;gt; set @b=5; mysql&amp;gt; call proc_add(2,@b,@s); mysql&amp;gt; select @s; +------+ | sum | +------+ | 7 | +------+ 1 row in set (0.</description>
     </item>
     
     <item>
       <title>MySQL基础：常用命令整理</title>
-      <link>/post/mysql-basic-syntax/</link>
+      <link>https://shuixingzhou.github.io/post/mysql-basic-syntax/</link>
       <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/mysql-basic-syntax/</guid>
+      <guid>https://shuixingzhou.github.io/post/mysql-basic-syntax/</guid>
       <description>MySQL是甲骨文旗下的一款开源的也是目前最为流行的数据库管理系统（DBMS,Database management system）。MySQL是一种典型的关系型数据库系统（RDBMS，Relational Database Management System)。 create database dbname; # 创建数据库 show databases; # 显示当前连接下的所有数据库 use dbname; # 进入dbname数据库 create table tbname (id int, name char(20)) # 创建表tbname，该表有两个字段 show tables; # 显示当前数据库所有的表 desc tbname; # 显示tbname表的信息 describe tbname; # 显示tbname表的信息 show columns from tbname; # 显示tbname表的信息 show create table tbname; # 显示tbname表创建时的信息 insert into tbname (id, name) values (1, &#39;xiaoming&#39;); # 插入记录 select * from tbname; # 查询tbname表所有记录 select id,name from tbname where id=1; # 条件查询tbname表记录 delete from tbname; # 删除表中所有信息 drop table tbname; # 删除表 drop database dbname; # 删除数据库 update tbname set name=&#39;joe&#39; where id=1; # 更新数据 alter table tbname add score float(4) default &#39;0&#39;; # 添加字段 alter table tbname drop column column_name; # 删除字段 alter table tbname change score grade float(4); # 修改字段名 alter table tb_article modify column name varchar(20); # 修改字段类型 rename tbname to tbname_new; # 修改表名 select user(); # 显示当前用户 select database(); # 显示当前数据库名 select now()，current_date(); # 查询时间 show table status like &#39;tbname&#39;; # 显示表的状态 show version(); # 查看MySQL版本 source D:/test.</description>
     </item>
     

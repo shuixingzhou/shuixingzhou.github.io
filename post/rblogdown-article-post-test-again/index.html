@@ -10,7 +10,7 @@
 <meta property="og:description" content="最近遇到一件很囧的事情，由于很忙（其实是很懒。。。），个人网站已经荒废了很久。最近偶有所感，想要重新拾掇起网站时竟然发现已经忘了怎么发布文章！
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/rblogdown-article-post-test-again/" />
+<meta property="og:url" content="https://shuixingzhou.github.io/post/rblogdown-article-post-test-again/" />
 
 
 
@@ -77,11 +77,11 @@
 			<p>最近遇到一件很囧的事情，由于很忙（其实是很懒。。。），个人网站已经荒废了很久。最近偶有所感，想要重新拾掇起网站时竟然发现已经忘了怎么发布文章！
 </p>
 
-<p>##1. 项目原始文件</p>
+<h2 id="1-项目原始文件">1. 项目原始文件</h2>
 
 <p>首先，要找到项目原始文件。这真不是废话，毕竟为了找我的网站原始文件，我可是花了两天的时间。。。</p>
 
-<p>##2. <code>Hugo</code>安装以及某些扩展包的升级</p>
+<h2 id="2-hugo-安装以及某些扩展包的升级">2. <code>Hugo</code>安装以及某些扩展包的升级</h2>
 
 <p>先用以下命令查看<code>hugo</code>是否正常安装，如果没有安装那么需要重新安装。至于有提示说某些包需要升级，那么直接点击<strong>是</strong>就好了。</p>
 
@@ -89,11 +89,11 @@
 blogdown::install_hugo()  # 前提是安装了rblogdown包
 </code></pre>
 
-<p>##3. 添加新的文章</p>
+<h2 id="3-添加新的文章">3. 添加新的文章</h2>
 
 <p>当都<code>RBlogdown</code>和<code>Hugo</code>已具备时，那么就到了正式发布文章的时候了。首先在<strong>RStudio</strong>中点击<strong>Addins</strong>（极力推荐<strong>RStudio</strong>，<strong>RStudio</strong>在手会让事情简单很多），然后添加文章标题、分类、标签等信息。信息填全之后，点击<strong>Done</strong>就进入了文章本身编辑界面了。</p>
 
-<p>##4. 文章发布</p>
+<h2 id="4-文章发布">4. 文章发布</h2>
 
 <p>文章写好之后，再次点击<strong>Addins</strong>，选择<strong>Serve Site</strong>预览一下，检查网站是否存在问题。同时也是借助该过程将*markdown*<strong>Kinit</strong>成*html*文件。</p>
 
@@ -105,7 +105,7 @@ git commit -m &quot;newly created post commit&quot;
 git push -u origin master  # Branch 'master' set up to track remote branch 'master' from 'origin'.表明网站文章上传成功。
 </code></pre>
 
-<p>##5. 可能出现的问题</p>
+<h2 id="5-可能出现的问题">5. 可能出现的问题</h2>
 
 <p><strong>情形1：</strong>兴冲冲点击<strong>Serve Site</strong>后，新建的文章根本没有反应。<strong>解决方案：</strong>项目根目录下命令行中运行<code>Hugo</code>命令，即可生成新<code>public</code>文件夹，然后再运行<code>hugo server</code>命令，预览网站文件是否正常。如果正常那么进入<code>public</code>，将其传入远端仓库即可。</p>
 		</div>
@@ -127,7 +127,7 @@ git push -u origin master  # Branch 'master' set up to track remote branch 'mast
 		<span class="authorbox__name">About shuixingzhou</span>
 	</div>
 	<div class="authorbox__description">
-		野生程序猿，爱好R、Python等，自学----尚未成才。有梦啥不怕，诗酒趁年华!
+		野生程序猿，爱好linux、R、Python等，自学许久，尚未成才。以梦为马，诗酒趁年华!
 	</div>
 </div>
 	

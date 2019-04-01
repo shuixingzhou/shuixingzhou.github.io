@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>技术文章 on 水行舟</title>
-    <link>/post/</link>
+    <link>https://shuixingzhou.github.io/post/</link>
     <description>Recent content in 技术文章 on 水行舟</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <lastBuildDate>Mon, 09 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shuixingzhou.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>RBlogdown文章发布之再测试</title>
-      <link>/post/rblogdown-article-post-test-again/</link>
+      <link>https://shuixingzhou.github.io/post/rblogdown-article-post-test-again/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/rblogdown-article-post-test-again/</guid>
+      <guid>https://shuixingzhou.github.io/post/rblogdown-article-post-test-again/</guid>
       <description>&lt;p&gt;最近遇到一件很囧的事情，由于很忙（其实是很懒。。。），个人网站已经荒废了很久。最近偶有所感，想要重新拾掇起网站时竟然发现已经忘了怎么发布文章！
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>sed学习要点</title>
-      <link>/post/sed_tutorial/</link>
+      <link>https://shuixingzhou.github.io/post/sed_tutorial/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/sed_tutorial/</guid>
+      <guid>https://shuixingzhou.github.io/post/sed_tutorial/</guid>
       <description>&lt;p&gt;The acronym &lt;code&gt;SED&lt;/code&gt; stands for &lt;strong&gt;Stream EDitor&lt;/strong&gt;. It is a simple yet powerful utility that parses the text and transforms it seamlessly. SED was developed during 1973–74 by Lee E. McMahon of Bell Labs. Today, it runs on all major operating systems.
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>深入学习python装饰器</title>
-      <link>/post/steps-to-python-decorators/</link>
+      <link>https://shuixingzhou.github.io/post/steps-to-python-decorators/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/steps-to-python-decorators/</guid>
+      <guid>https://shuixingzhou.github.io/post/steps-to-python-decorators/</guid>
       <description>&lt;p&gt;如果拜读过大牛的代码，会发现他们有用到热衷炫酷的装饰器。可是当去查看装饰器的定义时，各种定义和解释常常让人一头雾水。本教程逐步深入装饰器的原理，从最简单的函数开始，到多层装饰器，一步一步拨云见日，让人豁然开朗。
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>NGS sequence analysis with R / Bioconductor: RNA-Seq workflow</title>
-      <link>/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/</link>
+      <link>https://shuixingzhou.github.io/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/</link>
       <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/</guid>
+      <guid>https://shuixingzhou.github.io/post/ngs-sequence-analysis-with-r-bioconductor-rna-seq-workflow/</guid>
       <description>&lt;p&gt;&lt;strong&gt;ATTENTION:&lt;/strong&gt; This post i found on the Internet, all rights reserved to the origin authors.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=&#34;http://biocluster.ucr.edu/~rkaundal/workshops/R_mar2016/RNAseq.html#integrated-development-environment-ide-for-r&#34;&gt;http://biocluster.ucr.edu/~rkaundal/workshops/R_mar2016/RNAseq.html#integrated-development-environment-ide-for-r&lt;/a&gt;&lt;/p&gt;
@@ -56,30 +56,30 @@
     
     <item>
       <title>pip安装路上的各种坑</title>
-      <link>/post/pip-installation-problems/</link>
+      <link>https://shuixingzhou.github.io/post/pip-installation-problems/</link>
       <pubDate>Thu, 14 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/pip-installation-problems/</guid>
+      <guid>https://shuixingzhou.github.io/post/pip-installation-problems/</guid>
       <description>&lt;p&gt;最近使用&lt;code&gt;pip&lt;/code&gt;安装python扩展包的时候，又遇到了许多问题，现在一一记录下来，以备日后查询。
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Windows下生成git ssh公钥</title>
-      <link>/post/windows-git-ssh/</link>
+      <link>https://shuixingzhou.github.io/post/windows-git-ssh/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/windows-git-ssh/</guid>
+      <guid>https://shuixingzhou.github.io/post/windows-git-ssh/</guid>
       <description>&lt;p&gt;Git是一款开源版本控制系统（Version Conrol System, VCS），由大神Linus用C写成。
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Ubuntu 18.04LTS更新日记</title>
-      <link>/post/ubuntu-update-note/</link>
+      <link>https://shuixingzhou.github.io/post/ubuntu-update-note/</link>
       <pubDate>Sat, 05 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/ubuntu-update-note/</guid>
+      <guid>https://shuixingzhou.github.io/post/ubuntu-update-note/</guid>
       <description>&lt;p&gt;两年前因为好奇装上了&lt;b&gt;Ubuntu16.04LTS&lt;/b&gt;，之后一发不可收拾，从此走上了不折腾不舒服斯基的道路。参考网上资料、购买书籍或者自己瞎几把捣鼓，加固态硬盘，扩充内存条，装双系统等，在自己条件可及的情况下把这台老当益壮的惠普折腾的够呛，而自己也在&lt;code&gt;Linux&lt;/code&gt;这个坑里越陷越深。
 4月26号发布了期待已久的的&lt;b&gt;Ubuntu18.04LTS&lt;/b&gt;，第一时间也上手尝试了一下。
 &lt;/p&gt;</description>
@@ -87,20 +87,20 @@
     
     <item>
       <title>MySQL存储过程和函数</title>
-      <link>/post/mysql-stored-procedure-and-function/</link>
+      <link>https://shuixingzhou.github.io/post/mysql-stored-procedure-and-function/</link>
       <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/mysql-stored-procedure-and-function/</guid>
-      <description>&lt;p&gt;存储过程（stored procedure）和函数（function）是事先经过编译并存储在数据库中的一段SQL语句的集合。
-&lt;/p&gt;</description>
+      <guid>https://shuixingzhou.github.io/post/mysql-stored-procedure-and-function/</guid>
+      <description>存储过程（stored procedure）和函数（function）是事先经过编译并存储在数据库中的一段SQL语句的集合。 1. 存储过程 创建过程 创建一个简单的存储过程，接受两个整型输入参数，计算二者之和，然后将其输出给一个整型参数。
+DROP PROCEDURE IF EXISTS `proc_add`; DELIMITER // CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_add`(IN a int, IN b int, OUT sum int) # DEFINER=`root`@`localhost` 创建者 BEGIN #Routine body goes here... DECLARE c int; if a is null then set a = 0; end if; if b is null then set b = 0; end if; set sum = a + b; END // DELIMITER ;  调用过程 mysql&amp;gt; set @b=5; mysql&amp;gt; call proc_add(2,@b,@s); mysql&amp;gt; select @s; +------+ | sum | +------+ | 7 | +------+ 1 row in set (0.</description>
     </item>
     
     <item>
       <title>万网域名解析记录</title>
-      <link>/post/domain-name-resolution/</link>
+      <link>https://shuixingzhou.github.io/post/domain-name-resolution/</link>
       <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/domain-name-resolution/</guid>
+      <guid>https://shuixingzhou.github.io/post/domain-name-resolution/</guid>
       <description>采用的阿里云旗下万网域名。域名解析直接进入阿里云控制台选择域名点击解析即可。 一、记录类型 1. A记录： 将域名指向一个IPv4地址（例如：10.10.10.10），需要增加A记录
 2. CNAME记录： 如果将域名指向一个域名，实现与被指向域名相同的访问效果，需要增加CNAME记录
 3. MX记录： 建立电子邮箱服务，将指向邮件服务器地址，需要设置MX记录
@@ -136,10 +136,10 @@ mail：
     
     <item>
       <title>域名CNAME设置</title>
-      <link>/post/cname-setting/</link>
+      <link>https://shuixingzhou.github.io/post/cname-setting/</link>
       <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/cname-setting/</guid>
+      <guid>https://shuixingzhou.github.io/post/cname-setting/</guid>
       <description>在github pages和netlify服务成功设置之后，我想通过CNAME将这两个网站归并到我自己的域名之下，该域名之前解析到阿里云虚拟共享主机。很不幸，重新设置CNAME结果失败。此后，新申请了一个域名，然后将新的域名解析到github pages服务器上，结果可以正常运行。现在将这两次经历均记录如下。 1. 二级域名CNAME 起初，我的目的上将部署在github pages 和netlify的网站放在之前申请的域名之下以二级域名的形式统一管理。 假定原域名是example.top,现在采用CNAME将github pages网站放在原域名之下管理，如test.example.top。我期待的结果是当我在浏览器输入test.example.top时自动打开github pages网站。结果显示我想要的太多。example.top可以打开，但是test.example.top显示No Found。
 netlify设置就要简单的多了，现在域名控制台添加解析CNAME记录，将test1.example.top记录指向原网站sitename.netlify.com。然后在netlify配置页，添加一个Custom domains也就了test1.example.top就可了！ 然后，test1.example.top和sitename.netlify.com都可以进入网站。此处需要注意的是：以这两个域名进入网站之后浏览器地址栏显示各自的域名，而不是像github pages那么在浏览器地址栏都显示test.example.top。
 2. 新域名CNAME设置 历尽多次挫折之后，索性我又申请了一个新的域名，another.top，（好在现在这些莫名其妙的域名比较便宜），然后重新对域名进行解析。在域名控制台使用CNAME记录类型，分别将www和@解析到username.github.io。然后在github中在username.github.io根目录下添加一个CNAME文件（就是一个名字为CNAME没有扩展名的文件），文件内容很简单，就是another.top。注意：没有http://或者www等。
@@ -152,10 +152,10 @@ netlify设置就要简单的多了，现在域名控制台添加解析CNAME记�
     
     <item>
       <title>Test on git addins in Rstudio</title>
-      <link>/post/test-on-git-addins-in-rstudio/</link>
+      <link>https://shuixingzhou.github.io/post/test-on-git-addins-in-rstudio/</link>
       <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/test-on-git-addins-in-rstudio/</guid>
+      <guid>https://shuixingzhou.github.io/post/test-on-git-addins-in-rstudio/</guid>
       <description>Now i find a very interesting addins of Rstudio&amp;ndash;git. I used to use git as my version control tool. However never did i notice that Rstudio colected this funciton. It is really interesting!
 There are some methods in Rstudio to use git addins.
 TODO: finish this later!
@@ -164,10 +164,10 @@ later!</description>
     
     <item>
       <title>如何把本地项目上传到github上去？</title>
-      <link>/post/2018-03-27-git-local-remote/</link>
+      <link>https://shuixingzhou.github.io/post/2018-03-27-git-local-remote/</link>
       <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-03-27-git-local-remote/</guid>
+      <guid>https://shuixingzhou.github.io/post/2018-03-27-git-local-remote/</guid>
       <description>Git作为最知名的开源版本控制系统,常用于快捷高效地处理各类项目。
 一直纠结于如何快速的将本地项目推送到github远程服务器上去，今天收集了部分资料，记录如下。 1. 常用命令 git init
 首先进入项目根目录，初始化该项目，将项目加入git管理，该目录就是git的工作目录。运行该命令后会在根目录下新建一个.git的目录，用于保存所有的版本记录。
@@ -193,10 +193,10 @@ git pull &amp;hellip;
     
     <item>
       <title>部署个人网站到netlify服务器</title>
-      <link>/post/test-on-netlify/</link>
+      <link>https://shuixingzhou.github.io/post/test-on-netlify/</link>
       <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/test-on-netlify/</guid>
+      <guid>https://shuixingzhou.github.io/post/test-on-netlify/</guid>
       <description>看到网上许多教程都讲静态网站托管到netlify上,今天我也尝试了一下。 1. 部署步骤 前期借助于HUGO、Rblogdown等工具成功创建了个人的静态网站。同时也成功的部署到了github pages服务上。在此前我已经尝试过将静态网站部署到netlify，但是总是遇到配置错误。今天搜到了一个更加详细的中文教程，重新尝试了一下果然成功。暂时mark一下，等有时间了在好好看看当初没什么总是配置错误。
 使用Github账号登陆Netlify 的官网，点击New site from Git， 选择要上传的的仓库。然后等待该服务器进行配置，过一段时间网站就建立好了。
 2. 个人疑惑 现在我已经成功的在netlify和github pages上成功的建立了自己的个人网站，那么这两个托管服务有哪些区别呢？初步来看，个人认为主要的区别是，github pages仅能部署一个网站，网站名与用户名必须一致，而netlify则可以托管多个站点。当然，这两个网站共同点都是能够自动同步github仓库里的更新！That is awesome!
@@ -205,10 +205,10 @@ esome!</description>
     
     <item>
       <title>Getting Started with Hugo</title>
-      <link>/post/2018-03-24-hugoisforlovers/</link>
+      <link>https://shuixingzhou.github.io/post/2018-03-24-hugoisforlovers/</link>
       <pubDate>Sat, 24 Mar 2018 21:13:14 -0500</pubDate>
       
-      <guid>/post/2018-03-24-hugoisforlovers/</guid>
+      <guid>https://shuixingzhou.github.io/post/2018-03-24-hugoisforlovers/</guid>
       <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
 Save it somewhere specific as we will be using it in the next step.
 More complete instructions are available at installing hugo
@@ -219,10 +219,10 @@ Follow the following steps:
     
     <item>
       <title>Migrate from jekyll</title>
-      <link>/post/2018-03-24-migrate-from-jekyll/</link>
+      <link>https://shuixingzhou.github.io/post/2018-03-24-migrate-from-jekyll/</link>
       <pubDate>Sat, 24 Mar 2018 21:13:14 -0500</pubDate>
       
-      <guid>/post/2018-03-24-migrate-from-jekyll/</guid>
+      <guid>https://shuixingzhou.github.io/post/2018-03-24-migrate-from-jekyll/</guid>
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
@@ -230,38 +230,38 @@ Follow the following steps:
     
     <item>
       <title>MySQL基础：常用命令整理</title>
-      <link>/post/mysql-basic-syntax/</link>
+      <link>https://shuixingzhou.github.io/post/mysql-basic-syntax/</link>
       <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/mysql-basic-syntax/</guid>
+      <guid>https://shuixingzhou.github.io/post/mysql-basic-syntax/</guid>
       <description>MySQL是甲骨文旗下的一款开源的也是目前最为流行的数据库管理系统（DBMS,Database management system）。MySQL是一种典型的关系型数据库系统（RDBMS，Relational Database Management System)。 create database dbname; # 创建数据库 show databases; # 显示当前连接下的所有数据库 use dbname; # 进入dbname数据库 create table tbname (id int, name char(20)) # 创建表tbname，该表有两个字段 show tables; # 显示当前数据库所有的表 desc tbname; # 显示tbname表的信息 describe tbname; # 显示tbname表的信息 show columns from tbname; # 显示tbname表的信息 show create table tbname; # 显示tbname表创建时的信息 insert into tbname (id, name) values (1, &#39;xiaoming&#39;); # 插入记录 select * from tbname; # 查询tbname表所有记录 select id,name from tbname where id=1; # 条件查询tbname表记录 delete from tbname; # 删除表中所有信息 drop table tbname; # 删除表 drop database dbname; # 删除数据库 update tbname set name=&#39;joe&#39; where id=1; # 更新数据 alter table tbname add score float(4) default &#39;0&#39;; # 添加字段 alter table tbname drop column column_name; # 删除字段 alter table tbname change score grade float(4); # 修改字段名 alter table tb_article modify column name varchar(20); # 修改字段类型 rename tbname to tbname_new; # 修改表名 select user(); # 显示当前用户 select database(); # 显示当前数据库名 select now()，current_date(); # 查询时间 show table status like &#39;tbname&#39;; # 显示表的状态 show version(); # 查看MySQL版本 source D:/test.</description>
     </item>
     
     <item>
       <title>Creating a New Theme</title>
-      <link>/post/2018-03-24-creating-a-new-theme/</link>
+      <link>https://shuixingzhou.github.io/post/2018-03-24-creating-a-new-theme/</link>
       <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-03-24-creating-a-new-theme/</guid>
+      <guid>https://shuixingzhou.github.io/post/2018-03-24-creating-a-new-theme/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
     
     <item>
       <title>Hugo Template Primer</title>
-      <link>/post/hugo-template-primer/</link>
+      <link>https://shuixingzhou.github.io/post/hugo-template-primer/</link>
       <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/hugo-template-primer/</guid>
+      <guid>https://shuixingzhou.github.io/post/hugo-template-primer/</guid>
       <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.</description>
     </item>
     
     <item>
       <title>利用Rblogdown建立个人博客网站</title>
-      <link>/post/rblogdown-to-build-website/</link>
+      <link>https://shuixingzhou.github.io/post/rblogdown-to-build-website/</link>
       <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/rblogdown-to-build-website/</guid>
+      <guid>https://shuixingzhou.github.io/post/rblogdown-to-build-website/</guid>
       <description>一直都有建一个个人网站的打算，为此我还申请了域名、购买了主机。但是一直都没有找到合适的建站模板。此前尝试过织梦、Wordpress和django等，但都有各自的不理想之处。遇上Rblogdown后算是一见倾心。今天终于完成了Rblogdown建个人网站的项目，现在讲建站过程以及遇到的问题记录下来以便日后查询。  1.软件准备 Rblogdown是基于HUGO技术的一个R扩展包，是谢益辉 大神为大家准备的又一个神兵利器。想要通过Rblogdown来建立自己的网站，首先要安装相关的程序。
 R与R IDE
 毫无疑问首先需要安装R语言， 同时R语言IDE个人推荐使用RStudio。然后需要安装我们的主角，Rblodown扩展包。采用RStudio和Rblogdown应该是一个捷径。
@@ -284,10 +284,10 @@ cd public git init git add -A git commit -m &amp;quot;first commit&amp;quot; git
     
     <item>
       <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <link>https://shuixingzhou.github.io/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>https://shuixingzhou.github.io/post/2015-07-23-r-rmarkdown/</guid>
       <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>

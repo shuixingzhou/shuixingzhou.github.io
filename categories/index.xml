@@ -2,102 +2,102 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 水行舟</title>
-    <link>/categories/</link>
+    <link>https://shuixingzhou.github.io/categories/</link>
     <description>Recent content in Categories on 水行舟</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <lastBuildDate>Sun, 08 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shuixingzhou.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bioinforamtics</title>
-      <link>/categories/bioinforamtics/</link>
+      <link>https://shuixingzhou.github.io/categories/bioinforamtics/</link>
       <pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/bioinforamtics/</guid>
+      <guid>https://shuixingzhou.github.io/categories/bioinforamtics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Git</title>
-      <link>/categories/git/</link>
+      <link>https://shuixingzhou.github.io/categories/git/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/git/</guid>
+      <guid>https://shuixingzhou.github.io/categories/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>/categories/hugo/</link>
+      <link>https://shuixingzhou.github.io/categories/hugo/</link>
       <pubDate>Sat, 24 Mar 2018 21:13:14 -0500</pubDate>
       
-      <guid>/categories/hugo/</guid>
+      <guid>https://shuixingzhou.github.io/categories/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>/categories/linux/</link>
+      <link>https://shuixingzhou.github.io/categories/linux/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/categories/linux/</guid>
+      <guid>https://shuixingzhou.github.io/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mysql</title>
-      <link>/categories/mysql/</link>
+      <link>https://shuixingzhou.github.io/categories/mysql/</link>
       <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/mysql/</guid>
+      <guid>https://shuixingzhou.github.io/categories/mysql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>/categories/python/</link>
+      <link>https://shuixingzhou.github.io/categories/python/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/categories/python/</guid>
+      <guid>https://shuixingzhou.github.io/categories/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>/categories/r/</link>
+      <link>https://shuixingzhou.github.io/categories/r/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/categories/r/</guid>
+      <guid>https://shuixingzhou.github.io/categories/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Website</title>
-      <link>/categories/website/</link>
+      <link>https://shuixingzhou.github.io/categories/website/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/categories/website/</guid>
+      <guid>https://shuixingzhou.github.io/categories/website/</guid>
       <description></description>
     </item>
     
     <item>
       <title>生活</title>
-      <link>/categories/%E7%94%9F%E6%B4%BB/</link>
+      <link>https://shuixingzhou.github.io/categories/%E7%94%9F%E6%B4%BB/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/%E7%94%9F%E6%B4%BB/</guid>
+      <guid>https://shuixingzhou.github.io/categories/%E7%94%9F%E6%B4%BB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>诗词</title>
-      <link>/categories/%E8%AF%97%E8%AF%8D/</link>
+      <link>https://shuixingzhou.github.io/categories/%E8%AF%97%E8%AF%8D/</link>
       <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/%E8%AF%97%E8%AF%8D/</guid>
+      <guid>https://shuixingzhou.github.io/categories/%E8%AF%97%E8%AF%8D/</guid>
       <description></description>
     </item>
     
