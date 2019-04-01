@@ -91,8 +91,8 @@
       <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://shuixingzhou.github.io/post/mysql-stored-procedure-and-function/</guid>
-      <description>&lt;p&gt;存储过程（stored procedure）和函数（function）是事先经过编译并存储在数据库中的一段SQL语句的集合。
-&lt;/p&gt;</description>
+      <description>存储过程（stored procedure）和函数（function）是事先经过编译并存储在数据库中的一段SQL语句的集合。 1. 存储过程 创建过程 创建一个简单的存储过程，接受两个整型输入参数，计算二者之和，然后将其输出给一个整型参数。
+DROP PROCEDURE IF EXISTS `proc_add`; DELIMITER // CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_add`(IN a int, IN b int, OUT sum int) # DEFINER=`root`@`localhost` 创建者 BEGIN #Routine body goes here... DECLARE c int; if a is null then set a = 0; end if; if b is null then set b = 0; end if; set sum = a + b; END // DELIMITER ;  调用过程 mysql&amp;gt; set @b=5; mysql&amp;gt; call proc_add(2,@b,@s); mysql&amp;gt; select @s; +------+ | sum | +------+ | 7 | +------+ 1 row in set (0.</description>
     </item>
     
     <item>

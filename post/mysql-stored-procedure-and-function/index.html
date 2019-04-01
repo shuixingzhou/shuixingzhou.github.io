@@ -7,8 +7,8 @@
 <meta name="description" content="personal website to trace my progress">
 <meta name="generator" content="Hugo 0.40.1" />
 <meta property="og:title" content="MySQL存储过程和函数" />
-<meta property="og:description" content="存储过程（stored procedure）和函数（function）是事先经过编译并存储在数据库中的一段SQL语句的集合。
-" />
+<meta property="og:description" content="存储过程（stored procedure）和函数（function）是事先经过编译并存储在数据库中的一段SQL语句的集合。 1. 存储过程 创建过程 创建一个简单的存储过程，接受两个整型输入参数，计算二者之和，然后将其输出给一个整型参数。
+DROP PROCEDURE IF EXISTS `proc_add`; DELIMITER // CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_add`(IN a int, IN b int, OUT sum int) # DEFINER=`root`@`localhost` 创建者 BEGIN #Routine body goes here... DECLARE c int; if a is null then set a = 0; end if; if b is null then set b = 0; end if; set sum = a &#43; b; END // DELIMITER ;  调用过程 mysql&gt; set @b=5; mysql&gt; call proc_add(2,@b,@s); mysql&gt; select @s; &#43;------&#43; | sum | &#43;------&#43; | 7 | &#43;------&#43; 1 row in set (0." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://shuixingzhou.github.io/post/mysql-stored-procedure-and-function/" />
 
@@ -74,7 +74,9 @@
 			</p>
 		</header>
 		<div class="post__content clearfix">
-			<p>存储过程（stored procedure）和函数（function）是事先经过编译并存储在数据库中的一段SQL语句的集合。
+			
+
+<p>存储过程（stored procedure）和函数（function）是事先经过编译并存储在数据库中的一段SQL语句的集合。
 </p>
 
 <h2 id="1-存储过程">1. 存储过程</h2>
@@ -181,7 +183,8 @@ mysql&gt; select @ax;
 <p><strong>注意</strong>
 - 创建存储过程和函数需要<code>CREATE ROUTINE</code>权限，修改或者删除存储过程和函数需要<code>ALTER ROUTINE</code>权限，执行存储过程和函数需要<code>EXECUTE</code>权限。
 - 函数调用和过程调用方法不同，调用函数时函数需要在等号右边，也就是说调用函数必须有变量接受函数返回结果。函数必须有返回值，而存储过程没有。
-- 存储过程的参数可以使用<code>IN</code>、<code>OUT</code>和<code>INOUT</code>类型，而函数的参数只能是<code>IN</code>类型。</p>
+- 存储过程的参数可以使用<code>IN</code>、<code>OUT</code>和<code>INOUT</code>类型，而函数的参数只能是<code>IN</code>类型。</p>型。</p>
+
 		</div>
 		
 <div class="post__tags tags clearfix">
